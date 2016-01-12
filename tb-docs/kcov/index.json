@@ -1,9 +1,9 @@
 var data = {files:[
-{"link":"test_client-7d6f5a0e59d2bcc0/index.html","title":"test_client-7d6f5a0e59d2bcc0","summary_name":"test_client-7d6f5a0e59d2bcc0","covered_class":"lineCov","covered":"85.1","covered_lines":"212","uncovered_lines":"37","total_lines" : "249"},
-{"link":"test_lib-b23e8e02ddc7c5a5/index.html","title":"test_lib-b23e8e02ddc7c5a5","summary_name":"test_lib-b23e8e02ddc7c5a5","covered_class":"lineCov","covered":"100.0","covered_lines":"8","uncovered_lines":"0","total_lines" : "8"},
-{"link":"test_server-fc0cc26ce7287795/index.html","title":"test_server-fc0cc26ce7287795","summary_name":"test_server-fc0cc26ce7287795","covered_class":"lineCov","covered":"75.5","covered_lines":"163","uncovered_lines":"53","total_lines" : "216"},
-{"link":"tls-c00d5486bf2a262a/index.html","title":"tls-c00d5486bf2a262a","summary_name":"tls-c00d5486bf2a262a","covered_class":"lineCov","covered":"91.3","covered_lines":"95","uncovered_lines":"9","total_lines" : "104"},
-], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"lineCov","covered":"90.2","covered_lines":"331","uncovered_lines":"36","total_lines" : "367"},
+{"link":"test_client-7d6f5a0e59d2bcc0/index.html","title":"test_client-7d6f5a0e59d2bcc0","summary_name":"test_client-7d6f5a0e59d2bcc0","covered_class":"linePartCov","covered":"57.3","covered_lines":"750","uncovered_lines":"559","total_lines" : "1309"},
+{"link":"test_lib-b23e8e02ddc7c5a5/index.html","title":"test_lib-b23e8e02ddc7c5a5","summary_name":"test_lib-b23e8e02ddc7c5a5","covered_class":"lineNoCov","covered":"7.0","covered_lines":"72","uncovered_lines":"959","total_lines" : "1031"},
+{"link":"test_server-fc0cc26ce7287795/index.html","title":"test_server-fc0cc26ce7287795","summary_name":"test_server-fc0cc26ce7287795","covered_class":"linePartCov","covered":"46.2","covered_lines":"572","uncovered_lines":"667","total_lines" : "1239"},
+{"link":"tls-c00d5486bf2a262a/index.html","title":"tls-c00d5486bf2a262a","summary_name":"tls-c00d5486bf2a262a","covered_class":"linePartCov","covered":"25.7","covered_lines":"299","uncovered_lines":"865","total_lines" : "1164"},
+], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"70.0","covered_lines":"999","uncovered_lines":"428","total_lines" : "1427"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-12 14:57:03", "instrumented" : 577, "covered" : 478,};
+var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-12 15:11:53", "instrumented" : 4743, "covered" : 1693,};

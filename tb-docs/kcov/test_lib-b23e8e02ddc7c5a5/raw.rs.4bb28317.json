@@ -431,5 +431,5 @@ var data = {lines:[
 {"lineNum":"  430","line":"}","class":"linePartCov","hits":"1","order":"143","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_lib-b23e8e02ddc7c5a5", "date" : "2016-01-12 14:57:01", "instrumented" : 7, "covered" : 7,};
+var header = { "command" : "test_lib-b23e8e02ddc7c5a5", "date" : "2016-01-12 15:11:50", "instrumented" : 7, "covered" : 7,};
 var merged_data = [];
