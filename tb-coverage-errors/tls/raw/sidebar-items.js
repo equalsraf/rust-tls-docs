@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["init","Initialize libtls - make sure to call this before using the API Returns false if libtls failed to initialise."]],"struct":[["TlsError",""]],"type":[["TlsResult","result type for TLS operations"]]});
