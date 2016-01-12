@@ -1,0 +1,8 @@
+var data = {files:[
+{"link":"raw.rs.4bb28317.html","title":"raw.rs","summary_name":"[...]/tls/src/raw.rs","covered_class":"lineCov","covered":"88.0","covered_lines":"184","uncovered_lines":"25","total_lines" : "209"},
+{"link":"util.rs.9c5a0a29.html","title":"util.rs","summary_name":"[...]/tls/src/util.rs","covered_class":"lineCov","covered":"100.0","covered_lines":"13","uncovered_lines":"0","total_lines" : "13"},
+{"link":"lib.rs.25d90c90.html","title":"lib.rs","summary_name":"[...]/tls/src/lib.rs","covered_class":"lineCov","covered":"92.4","covered_lines":"134","uncovered_lines":"11","total_lines" : "145"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-12 14:57:02", "instrumented" : 367, "covered" : 331,};
+var merged_data = [];

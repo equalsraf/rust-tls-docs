@@ -1,0 +1,21 @@
+{
+ "service_name": "travis-ci",
+ "service_job_id": "101855924",
+ "source_files": [
+  {
+   "name": "raw.rs",
+   "source_digest": "0x4bb28317",
+   "coverage": [null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,0,0,null,null,null,null,1,1,1,null,1,1,1,null,null,1,1,1,1,null,1,1,null,1,null,null,null,0,0,0,null,null,0,0,0,null,null,null,1,1,0,1,null,0,null,null,null,null,null,null,null,null,null,null,null,1,1,1,0,null,1,null,1,null,1,null,1,1,1,1,null,null,0,null,1,1,null,1,1,null,1,null,null,0,null,1,1,1,1,null,null,0,null,1,1,1,1,1,1,1,1,1,1,1,null,1,1,1,1,null,null,0,null,1,1,null,1,1,1,1,null,null,0,null,1,1,1,null,1,1,1,null,1,1,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,1,null,1,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,0,null,null,1,null,null,null,1,null,1,1,1,null,1,1,null,null,null,1,1,null,null,1,null,null,null,null,null,null,null,1,null,1,null,1,1,1,null,1,1,null,null,null,1,null,1,1,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,1,1,1,null,null,null,null,null,1,1,1,1,1,null,1,1,1,1,null,1,null,1,null,1,1,1,1,null,1,null,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,null,1,1,1,1,1,null,1,1,1,1,null,1,1,null,0,0,0,null,null,null,0,0,0,null,null,1,1,1,1,null,null,1,null,1,null,null,null,null,null,1,1,1,1,null,1,1,1,1,null,1,1,1,1,1,1,null,1,1,1,1,1,1,null,null,1,1,1,0,null,null,1,null,null,null,1,null,null,null,1,1,1,1,1,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,1,null,1,null,null,null,null,1,null,null,1,1,1,1,1,1]
+  },
+  {
+   "name": "util.rs",
+   "source_digest": "0x9c5a0a29",
+   "coverage": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,1,null,1,1,null,1,1,null,null,1,null,null,null,1,1,1,1,1,null,1]
+  },
+  {
+   "name": "lib.rs",
+   "source_digest": "0x25d90c90",
+   "coverage": [null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,1,null,1,1,0,null,1,1,null,1,1,null,1,1,0,null,1,1,null,1,1,1,1,0,null,1,1,null,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,1,null,1,1,0,null,1,1,null,1,1,null,null,1,1,null,null,1,null,1,1,1,1,null,null,null,null,null,null,null,null,null,1,1,1,1,1,null,null,null,1,1,1,1,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null,null,1,1,1,0,null,1,null,null,null,1,null,null,null,null,null,null,null,null,null,null,1,1,1,1,1,1,1,1,1,1,1,1,null,null,null,null,null,null,null,null,null,1,1,1,0,1,null,null,null,1,1,1,0,1,null,null,null,null,null,null,1,1,1,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,1,1,1,0,null,1,1,null,1,1,null,null,1,1,null,null,1,null,1,1,1,1,1,1,1,1,null,null,null,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,1,1,1,null,null,null,null,null,null,null,null,null,null,null,1,1,null,null,1,1,1,1,1,1,1,1,null,null,1,1,null,null,1,1,null,1,null,null,null,null,1,1,null,null,null,null,null,1]
+  }
+ ]
+}
