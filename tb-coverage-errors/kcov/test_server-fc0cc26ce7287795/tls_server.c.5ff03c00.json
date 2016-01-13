@@ -183,5 +183,5 @@ var data = {lines:[
 {"lineNum":"  182","line":"}","class":"linePartCov","hits":"1","order":"743","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-fc0cc26ce7287795", "date" : "2016-01-13 13:40:09", "instrumented" : 89, "covered" : 50,};
+var header = { "command" : "test_server-fc0cc26ce7287795", "date" : "2016-01-13 14:19:05", "instrumented" : 89, "covered" : 50,};
 var merged_data = [];

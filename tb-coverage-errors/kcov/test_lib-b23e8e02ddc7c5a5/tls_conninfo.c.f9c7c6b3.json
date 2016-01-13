@@ -215,5 +215,5 @@ var data = {lines:[
 {"lineNum":"  214","line":"}","class":"lineNoCov","hits":"0","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_lib-b23e8e02ddc7c5a5", "date" : "2016-01-13 13:40:03", "instrumented" : 129, "covered" : 0,};
+var header = { "command" : "test_lib-b23e8e02ddc7c5a5", "date" : "2016-01-13 14:18:58", "instrumented" : 129, "covered" : 0,};
 var merged_data = [];

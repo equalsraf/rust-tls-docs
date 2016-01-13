@@ -6,4 +6,4 @@ var data = {files:[
 ], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"72.7","covered_lines":"1055","uncovered_lines":"396","total_lines" : "1451"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-13 13:40:10", "instrumented" : 4791, "covered" : 1813,};
+var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-13 14:19:06", "instrumented" : 4791, "covered" : 1813,};

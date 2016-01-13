@@ -373,8 +373,8 @@ var data = {lines:[
 {"lineNum":"  372","line":"    #[cfg(windows)]"},
 {"lineNum":"  373","line":"    /// Start a new TLS connection over an existing socket (server-side)"},
 {"lineNum":"  374","line":"    pub fn accept<F: IntoRawSocket>(&mut self, isock: F) -> TlsResult<TlsStream> {"},
-{"lineNum":"  375","line":"        let c = try!(self.ctx.accept_socket(fd));"},
-{"lineNum":"  376","line":"        let sock = isock.into_raw_socket();"},
+{"lineNum":"  375","line":"        let sock = isock.into_raw_socket();"},
+{"lineNum":"  376","line":"        let c = try!(self.ctx.accept_socket(sock));"},
 {"lineNum":"  377","line":"        Ok(TlsStream { ctx: c })"},
 {"lineNum":"  378","line":"    }"},
 {"lineNum":"  379","line":"}"},
@@ -416,5 +416,5 @@ var data = {lines:[
 {"lineNum":"  415","line":"}","class":"linePartCov","hits":"1","order":"521","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-13 13:40:10", "instrumented" : 19, "covered" : 19,};
+var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-13 14:19:06", "instrumented" : 19, "covered" : 19,};
 var merged_data = [];
