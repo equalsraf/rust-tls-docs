@@ -1,9 +1,9 @@
 var data = {files:[
-{"link":"test_client-7d6f5a0e59d2bcc0/index.html","title":"test_client-7d6f5a0e59d2bcc0","summary_name":"test_client-7d6f5a0e59d2bcc0","covered_class":"linePartCov","covered":"59.4","covered_lines":"786","uncovered_lines":"537","total_lines" : "1323"},
+{"link":"test_client-7d6f5a0e59d2bcc0/index.html","title":"test_client-7d6f5a0e59d2bcc0","summary_name":"test_client-7d6f5a0e59d2bcc0","covered_class":"linePartCov","covered":"60.8","covered_lines":"819","uncovered_lines":"529","total_lines" : "1348"},
 {"link":"test_lib-b23e8e02ddc7c5a5/index.html","title":"test_lib-b23e8e02ddc7c5a5","summary_name":"test_lib-b23e8e02ddc7c5a5","covered_class":"lineNoCov","covered":"7.0","covered_lines":"72","uncovered_lines":"959","total_lines" : "1031"},
-{"link":"test_server-fc0cc26ce7287795/index.html","title":"test_server-fc0cc26ce7287795","summary_name":"test_server-fc0cc26ce7287795","covered_class":"linePartCov","covered":"46.2","covered_lines":"572","uncovered_lines":"667","total_lines" : "1239"},
+{"link":"test_server-fc0cc26ce7287795/index.html","title":"test_server-fc0cc26ce7287795","summary_name":"test_server-fc0cc26ce7287795","covered_class":"linePartCov","covered":"49.9","covered_lines":"623","uncovered_lines":"625","total_lines" : "1248"},
 {"link":"tls-c00d5486bf2a262a/index.html","title":"tls-c00d5486bf2a262a","summary_name":"tls-c00d5486bf2a262a","covered_class":"linePartCov","covered":"25.7","covered_lines":"299","uncovered_lines":"865","total_lines" : "1164"},
-], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"71.8","covered_lines":"1035","uncovered_lines":"406","total_lines" : "1441"},
+], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"72.7","covered_lines":"1055","uncovered_lines":"396","total_lines" : "1451"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-12 17:03:50", "instrumented" : 4757, "covered" : 1729,};
+var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-13 13:40:10", "instrumented" : 4791, "covered" : 1813,};
