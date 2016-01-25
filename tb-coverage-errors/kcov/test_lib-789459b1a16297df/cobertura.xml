@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.000" version="1.9" timestamp="1453759250">
+<coverage line-rate="0.000" version="1.9" timestamp="1453765421">
 	<sources>
 		<source>/home/travis/build/equalsraf/rust-tls/</source>
 	</sources>
@@ -387,13 +387,13 @@
 				</class>
 				<class name="raw_rs" filename="tls/src/raw.rs" line-rate="1.000">
 					<lines>
-						<line number="422" hits="1"/>
-						<line number="425" hits="1"/>
-						<line number="426" hits="1"/>
-						<line number="427" hits="1"/>
-						<line number="428" hits="1"/>
-						<line number="429" hits="1"/>
-						<line number="430" hits="1"/>
+						<line number="405" hits="1"/>
+						<line number="408" hits="1"/>
+						<line number="409" hits="1"/>
+						<line number="410" hits="1"/>
+						<line number="411" hits="1"/>
+						<line number="412" hits="1"/>
+						<line number="413" hits="1"/>
 					</lines>
 				</class>
 				<class name="util_rs" filename="tls/src/util.rs" line-rate="1.000">

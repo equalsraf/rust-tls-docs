@@ -46,11 +46,11 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-360' class='srclink' href='../src/tls/lib.rs.html#356-358' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-340' class='srclink' href='../src/tls/lib.rs.html#338-340' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct TlsServer {
     // some fields omitted
 }</pre><div class='docblock'><p>TLS Server, used to start TLS session over existing sockets.</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../tls/struct.TlsServer.html' title='tls::TlsServer'>TlsServer</a></code></h3><div class='impl-items'><h4 id='method.accept' class='method'><code>fn <a href='#method.accept' class='fnname'>accept</a>&lt;F: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.IntoRawFd.html' title='std::sys::ext::io::IntoRawFd'>IntoRawFd</a>&gt;(&amp;mut self, ifd: F) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='struct' href='../tls/struct.TlsStream.html' title='tls::TlsStream'>TlsStream</a>&gt;</code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../tls/struct.TlsServer.html' title='tls::TlsServer'>TlsServer</a></code></h3><div class='impl-items'><h4 id='method.accept' class='method'><code>fn <a href='#method.accept' class='fnname'>accept</a>&lt;F: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(&amp;mut self, ifd: &amp;F) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='struct' href='../tls/struct.TlsStream.html' title='tls::TlsStream'>TlsStream</a>&gt;</code></h4>
 <div class='docblock'><p>Start a new TLS connection over an existing socket (server-side)</p>
 </div></div></section>
     <section id='search' class="content hidden"></section>
