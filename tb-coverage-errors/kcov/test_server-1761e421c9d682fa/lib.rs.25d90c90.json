@@ -171,7 +171,7 @@ var data = {lines:[
 {"lineNum":"  170","line":"    /// Establish a TLS connection over the given socket"},
 {"lineNum":"  171","line":"    pub fn from_socket<F: AsRawSocket>(self, isock: &F, servername: &str) -> TlsResult<TlsStream> {"},
 {"lineNum":"  172","line":"        let mut ctx = try!(self.new_ctx());"},
-{"lineNum":"  173","line":"        let sock = isock.into_raw_socket();"},
+{"lineNum":"  173","line":"        let sock = isock.as_raw_socket();"},
 {"lineNum":"  174","line":"        try!(ctx.connect_socket(sock, servername));"},
 {"lineNum":"  175","line":"        Ok(TlsStream { ctx: ctx })"},
 {"lineNum":"  176","line":"    }"},
@@ -255,7 +255,7 @@ var data = {lines:[
 {"lineNum":"  254","line":"        self.ctx","class":"lineCov","hits":"2","order":"715","possible_hits":"2",},
 {"lineNum":"  255","line":"            .read(buf)","class":"lineCov","hits":"1","order":"716","possible_hits":"1",},
 {"lineNum":"  256","line":"            .map_err(|err| io::Error::from(err))","class":"lineNoCov","hits":"0","possible_hits":"2",},
-{"lineNum":"  257","line":"    }","class":"linePartCov","hits":"1","order":"856","possible_hits":"2",},
+{"lineNum":"  257","line":"    }","class":"linePartCov","hits":"1","order":"861","possible_hits":"2",},
 {"lineNum":"  258","line":"}"},
 {"lineNum":"  259","line":""},
 {"lineNum":"  260","line":"impl Write for TlsStream {"},
@@ -397,5 +397,5 @@ var data = {lines:[
 {"lineNum":"  396","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-25 23:43:48", "instrumented" : 80, "covered" : 73,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-25 23:46:49", "instrumented" : 80, "covered" : 73,};
 var merged_data = [];

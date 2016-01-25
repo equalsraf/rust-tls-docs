@@ -430,16 +430,16 @@ var data = {lines:[
 {"lineNum":"  429","line":""},
 {"lineNum":"  430","line":"\tERR_clear_error();","class":"lineCov","hits":"1","order":"847","possible_hits":"1",},
 {"lineNum":"  431","line":"\tif ((ssl_ret = SSL_read(ctx->ssl_conn, buf, buflen)) > 0) {","class":"lineCov","hits":"1","order":"848","possible_hits":"1",},
-{"lineNum":"  432","line":"\t\trv = (ssize_t)ssl_ret;","class":"lineCov","hits":"1","order":"849","possible_hits":"1",},
-{"lineNum":"  433","line":"\t\tgoto out;","class":"lineCov","hits":"1","order":"850","possible_hits":"1",},
+{"lineNum":"  432","line":"\t\trv = (ssize_t)ssl_ret;","class":"lineCov","hits":"1","order":"854","possible_hits":"1",},
+{"lineNum":"  433","line":"\t\tgoto out;","class":"lineCov","hits":"1","order":"855","possible_hits":"1",},
 {"lineNum":"  434","line":"\t}"},
 {"lineNum":"  435","line":"\trv = (ssize_t)tls_ssl_error(ctx, ctx->ssl_conn, ssl_ret, \"read\");","class":"lineNoCov","hits":"0","possible_hits":"1",},
 {"lineNum":"  436","line":""},
 {"lineNum":"  437","line":" out:"},
 {"lineNum":"  438","line":"\t/* Prevent callers from performing incorrect error handling */"},
-{"lineNum":"  439","line":"\terrno = 0;","class":"lineCov","hits":"1","order":"851","possible_hits":"1",},
-{"lineNum":"  440","line":"\treturn (rv);","class":"lineCov","hits":"1","order":"852","possible_hits":"1",},
-{"lineNum":"  441","line":"}","class":"lineCov","hits":"1","order":"853","possible_hits":"1",},
+{"lineNum":"  439","line":"\terrno = 0;","class":"lineCov","hits":"1","order":"856","possible_hits":"1",},
+{"lineNum":"  440","line":"\treturn (rv);","class":"lineCov","hits":"1","order":"857","possible_hits":"1",},
+{"lineNum":"  441","line":"}","class":"lineCov","hits":"1","order":"858","possible_hits":"1",},
 {"lineNum":"  442","line":""},
 {"lineNum":"  443","line":"ssize_t"},
 {"lineNum":"  444","line":"tls_write(struct tls *ctx, const void *buf, size_t buflen)"},
@@ -522,5 +522,5 @@ var data = {lines:[
 {"lineNum":"  521","line":"}","class":"linePartCov","hits":"1","order":"920","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-25 23:43:48", "instrumented" : 284, "covered" : 164,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-25 23:46:49", "instrumented" : 284, "covered" : 164,};
 var merged_data = [];

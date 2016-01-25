@@ -171,7 +171,7 @@ var data = {lines:[
 {"lineNum":"  170","line":"    /// Establish a TLS connection over the given socket"},
 {"lineNum":"  171","line":"    pub fn from_socket<F: AsRawSocket>(self, isock: &F, servername: &str) -> TlsResult<TlsStream> {"},
 {"lineNum":"  172","line":"        let mut ctx = try!(self.new_ctx());"},
-{"lineNum":"  173","line":"        let sock = isock.into_raw_socket();"},
+{"lineNum":"  173","line":"        let sock = isock.as_raw_socket();"},
 {"lineNum":"  174","line":"        try!(ctx.connect_socket(sock, servername));"},
 {"lineNum":"  175","line":"        Ok(TlsStream { ctx: ctx })"},
 {"lineNum":"  176","line":"    }"},
@@ -397,5 +397,5 @@ var data = {lines:[
 {"lineNum":"  396","line":"}","class":"linePartCov","hits":"1","order":"520","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-25 23:43:49", "instrumented" : 19, "covered" : 19,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-25 23:46:50", "instrumented" : 19, "covered" : 19,};
 var merged_data = [];

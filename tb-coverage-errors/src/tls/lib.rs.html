@@ -610,7 +610,7 @@
     <span class='doccomment'>/// Establish a TLS connection over the given socket</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>from_socket</span><span class='op'>&lt;</span><span class='ident'>F</span>: <span class='ident'>AsRawSocket</span><span class='op'>&gt;</span>(<span class='self'>self</span>, <span class='ident'>isock</span>: <span class='kw-2'>&amp;</span><span class='ident'>F</span>, <span class='ident'>servername</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>TlsStream</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>ctx</span> <span class='op'>=</span> <span class='macro'>try</span><span class='macro'>!</span>(<span class='self'>self</span>.<span class='ident'>new_ctx</span>());
-        <span class='kw'>let</span> <span class='ident'>sock</span> <span class='op'>=</span> <span class='ident'>isock</span>.<span class='ident'>into_raw_socket</span>();
+        <span class='kw'>let</span> <span class='ident'>sock</span> <span class='op'>=</span> <span class='ident'>isock</span>.<span class='ident'>as_raw_socket</span>();
         <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>ctx</span>.<span class='ident'>connect_socket</span>(<span class='ident'>sock</span>, <span class='ident'>servername</span>));
         <span class='prelude-val'>Ok</span>(<span class='ident'>TlsStream</span> { <span class='ident'>ctx</span>: <span class='ident'>ctx</span> })
     }
