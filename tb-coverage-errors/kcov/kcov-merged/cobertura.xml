@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.000" version="1.9" timestamp="1452694745">
+<coverage line-rate="0.000" version="1.9" timestamp="1453759258">
 	<sources>
 		<source>/home/travis/build/equalsraf/rust-tls/</source>
 	</sources>
 	<packages>
-		<package name="tls_c00d5486bf2a262a" line-rate="0.000" branch-rate="1.0" complexity="1.0">
+		<package name="tls_90dc0ae2bd2b42a3" line-rate="0.000" branch-rate="1.0" complexity="1.0">
 			<classes>
 				<class name="tls_c" filename="libressl-2.3.1/tls/tls.c" line-rate="0.743">
 					<lines>
@@ -385,6 +385,23 @@
 						<line number="169" hits="0"/>
 					</lines>
 				</class>
+				<class name="util_rs" filename="tls/src/util.rs" line-rate="1.000">
+					<lines>
+						<line number="21" hits="1"/>
+						<line number="23" hits="1"/>
+						<line number="25" hits="1"/>
+						<line number="26" hits="1"/>
+						<line number="28" hits="1"/>
+						<line number="29" hits="1"/>
+						<line number="32" hits="1"/>
+						<line number="36" hits="1"/>
+						<line number="37" hits="1"/>
+						<line number="38" hits="1"/>
+						<line number="39" hits="1"/>
+						<line number="40" hits="1"/>
+						<line number="42" hits="1"/>
+					</lines>
+				</class>
 				<class name="raw_rs" filename="tls/src/raw.rs" line-rate="0.895">
 					<lines>
 						<line number="2" hits="1"/>
@@ -606,23 +623,6 @@
 						<line number="428" hits="1"/>
 						<line number="429" hits="1"/>
 						<line number="430" hits="1"/>
-					</lines>
-				</class>
-				<class name="util_rs" filename="tls/src/util.rs" line-rate="1.000">
-					<lines>
-						<line number="21" hits="1"/>
-						<line number="23" hits="1"/>
-						<line number="25" hits="1"/>
-						<line number="26" hits="1"/>
-						<line number="28" hits="1"/>
-						<line number="29" hits="1"/>
-						<line number="32" hits="1"/>
-						<line number="36" hits="1"/>
-						<line number="37" hits="1"/>
-						<line number="38" hits="1"/>
-						<line number="39" hits="1"/>
-						<line number="40" hits="1"/>
-						<line number="42" hits="1"/>
 					</lines>
 				</class>
 				<class name="tls_client_c" filename="libressl-2.3.1/tls/tls_client.c" line-rate="0.709">
