@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.000" version="1.9" timestamp="1453766492">
+<coverage line-rate="0.000" version="1.9" timestamp="1453768578">
 	<sources>
 		<source>/home/travis/build/equalsraf/rust-tls/</source>
 	</sources>
@@ -398,7 +398,7 @@
 				</class>
 				<class name="util_rs" filename="tls/src/util.rs" line-rate="1.000">
 					<lines>
-						<line number="21" hits="2"/>
+						<line number="22" hits="2"/>
 					</lines>
 				</class>
 				<class name="tls_client_c" filename="libressl-2.3.1/tls/tls_client.c" line-rate="0.000">

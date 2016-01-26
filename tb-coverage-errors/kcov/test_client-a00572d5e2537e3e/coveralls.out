@@ -1,6 +1,6 @@
 {
  "service_name": "travis-ci",
- "service_job_id": "104781819",
+ "service_job_id": "104788198",
  "source_files": [
   {
    "name": "libressl-2.3.1/tls/tls.c",
@@ -15,7 +15,7 @@
   {
    "name": "tls/src/util.rs",
    "source_digest": "0x9c5a0a29",
-   "coverage": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,null,1,null,1,0,null,1,1,null,null,1,null,null,null,1,1,1,1,2,null,1]
+   "coverage": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,null,1,null,1,0,null,1,1,null,null,1,null,null,null,1,1,1,1,2,null,1]
   },
   {
    "name": "tls/src/raw.rs",
@@ -45,7 +45,7 @@
   {
    "name": "tls/src/lib.rs",
    "source_digest": "0x25d90c90",
-   "coverage": [null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,1,1,0,null,1,1,null,1,2,null,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,null,null,1,1,null,null,2,null,1,1,1,2,null,null,null,4,2,1,1,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null,null,1,2,1,0,null,1,null,null,null,1,null,null,null,null,null,null,null,null,null,null,1,1,1,1,1,1,1,1,1,1,1,1,null,null,null,null,null,null,null,null,null,1,2,1,0,1,null,null,null,1,2,1,0,1,null,null,null,null,null,null,1,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+   "coverage": [null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,1,1,0,null,1,1,null,1,2,null,null,null,null,null,null,null,null,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,null,1,1,0,null,1,1,null,1,2,null,null,1,1,null,null,2,null,1,1,1,2,null,null,null,4,2,1,1,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null,null,1,2,1,0,null,1,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,1,1,1,1,1,1,1,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1,2,1,0,1,null,null,null,1,2,1,0,1,null,null,null,null,null,null,1,1,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
   },
   {
    "name": "libressl-2.3.1/tls/tls_verify.c",

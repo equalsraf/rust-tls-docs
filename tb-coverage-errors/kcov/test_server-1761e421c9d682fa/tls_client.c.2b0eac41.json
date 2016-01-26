@@ -261,7 +261,7 @@ var data = {lines:[
 {"lineNum":"  260","line":"\t\tgoto err;","class":"lineNoCov","hits":"0","possible_hits":"1",},
 {"lineNum":"  261","line":"\t}"},
 {"lineNum":"  262","line":""},
-{"lineNum":"  263","line":"\tif (ctx->config->verify_name) {","class":"lineCov","hits":"1","order":"740","possible_hits":"1",},
+{"lineNum":"  263","line":"\tif (ctx->config->verify_name) {","class":"lineCov","hits":"1","order":"741","possible_hits":"1",},
 {"lineNum":"  264","line":"\t\tcert = SSL_get_peer_certificate(ctx->ssl_conn);","class":"lineNoCov","hits":"0","possible_hits":"1",},
 {"lineNum":"  265","line":"\t\tif (cert == NULL) {","class":"lineNoCov","hits":"0","possible_hits":"1",},
 {"lineNum":"  266","line":"\t\t\ttls_set_errorx(ctx, \"no server certificate\");","class":"lineNoCov","hits":"0","possible_hits":"1",},
@@ -286,5 +286,5 @@ var data = {lines:[
 {"lineNum":"  285","line":"}","class":"linePartCov","hits":"1","order":"783","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-26 00:01:38", "instrumented" : 141, "covered" : 38,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-26 00:36:24", "instrumented" : 141, "covered" : 38,};
 var merged_data = [];

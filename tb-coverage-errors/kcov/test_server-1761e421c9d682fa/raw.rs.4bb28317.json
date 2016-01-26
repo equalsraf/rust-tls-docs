@@ -337,8 +337,8 @@ var data = {lines:[
 {"lineNum":"  336","line":"        let buflen = buf.len() as size_t;","class":"lineCov","hits":"1","order":"718","possible_hits":"1",},
 {"lineNum":"  337","line":"        let bptr = buf.as_mut_ptr() as *mut c_void;","class":"lineCov","hits":"1","order":"719","possible_hits":"1",},
 {"lineNum":"  338","line":"        let rv = unsafe { ffi::tls_read(self.ptr, bptr, buflen) };","class":"lineCov","hits":"1","order":"724","possible_hits":"1",},
-{"lineNum":"  339","line":"        self.rv_to_result_io(rv as i64)","class":"lineCov","hits":"1","order":"859","possible_hits":"1",},
-{"lineNum":"  340","line":"    }","class":"linePartCov","hits":"1","order":"860","possible_hits":"2",},
+{"lineNum":"  339","line":"        self.rv_to_result_io(rv as i64)","class":"lineCov","hits":"1","order":"854","possible_hits":"1",},
+{"lineNum":"  340","line":"    }","class":"linePartCov","hits":"1","order":"855","possible_hits":"2",},
 {"lineNum":"  341","line":""},
 {"lineNum":"  342","line":"    pub fn write(&mut self, buf: &[u8]) -> TlsResult<usize> {","class":"lineCov","hits":"1","order":"598","possible_hits":"1",},
 {"lineNum":"  343","line":"        let buflen = buf.len() as size_t;","class":"lineCov","hits":"1","order":"599","possible_hits":"1",},
@@ -414,5 +414,5 @@ var data = {lines:[
 {"lineNum":"  413","line":"}","class":"linePartCov","hits":"1","order":"141","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-26 00:01:38", "instrumented" : 130, "covered" : 98,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-26 00:36:24", "instrumented" : 130, "covered" : 98,};
 var merged_data = [];

@@ -10,5 +10,5 @@ var data = {files:[
 {"link":"tls_server.c.5ff03c00.html","title":"tls_server.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_server.c","covered_class":"lineNoCov","covered":"0.0","covered_lines":"0","uncovered_lines":"89","total_lines" : "89"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_lib-789459b1a16297df", "date" : "2016-01-26 00:01:32", "instrumented" : 1031, "covered" : 72,};
+var header = { "command" : "test_lib-789459b1a16297df", "date" : "2016-01-26 00:36:18", "instrumented" : 1031, "covered" : 72,};
 var merged_data = [];
