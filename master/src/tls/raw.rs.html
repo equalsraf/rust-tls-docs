@@ -9,6 +9,7 @@
 
     <title>raw.rs.html -- source</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
     
@@ -453,23 +454,6 @@
 <span id="411">411</span>
 <span id="412">412</span>
 <span id="413">413</span>
-<span id="414">414</span>
-<span id="415">415</span>
-<span id="416">416</span>
-<span id="417">417</span>
-<span id="418">418</span>
-<span id="419">419</span>
-<span id="420">420</span>
-<span id="421">421</span>
-<span id="422">422</span>
-<span id="423">423</span>
-<span id="424">424</span>
-<span id="425">425</span>
-<span id="426">426</span>
-<span id="427">427</span>
-<span id="428">428</span>
-<span id="429">429</span>
-<span id="430">430</span>
 </pre><pre class='rust '>
 
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>tls_sys</span> <span class='kw'>as</span> <span class='ident'>ffi</span>;
@@ -483,9 +467,9 @@
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>convert</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>;
 <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>unix</span>)]</span>
-<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>unix</span>::<span class='ident'>io</span>::<span class='ident'>IntoRawFd</span>;
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>unix</span>::<span class='ident'>io</span>::<span class='ident'>RawFd</span>;
 <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>windows</span>)]</span>
-<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>windows</span>::<span class='ident'>io</span>::<span class='ident'>IntoRawSocket</span>;
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>windows</span>::<span class='ident'>io</span>::<span class='ident'>RawSocket</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>sync</span>::{<span class='ident'>Once</span>, <span class='ident'>ONCE_INIT</span>};
 <span class='kw'>use</span> <span class='ident'>super</span>::<span class='ident'>util</span>::<span class='op'>*</span>;
 
@@ -685,41 +669,24 @@
         }
     }
 
-    <span class='doccomment'>/// If port is empty, the port value is assumed to be part of the hostname string as host:port.</span>
-    <span class='doccomment'>/// If servername is not empty it is used instead of the hostname for verification.</span>
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>connect_servername</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>,
-                              <span class='ident'>hostname</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>,
-                              <span class='ident'>port</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>,
-                              <span class='ident'>servername</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>)
-                              <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span>()<span class='op'>&gt;</span> {
-        <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
-            <span class='kw'>let</span> <span class='ident'>hostname_c</span> <span class='op'>=</span> <span class='ident'>CString</span>::<span class='ident'>from_vec_unchecked</span>(<span class='ident'>hostname</span>.<span class='ident'>bytes</span>().<span class='ident'>collect</span>()).<span class='ident'>as_ptr</span>();
-            <span class='comment'>// Both port and servername can be NULL</span>
-            <span class='kw'>let</span> <span class='ident'>port_c</span> <span class='op'>=</span> <span class='ident'>str_c_ptr</span>(<span class='ident'>port</span>);
-            <span class='kw'>let</span> <span class='ident'>servername_c</span> <span class='op'>=</span> <span class='ident'>str_c_ptr</span>(<span class='ident'>servername</span>);
-            <span class='ident'>ffi</span>::<span class='ident'>tls_connect_servername</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='ident'>hostname_c</span>, <span class='ident'>port_c</span>, <span class='ident'>servername_c</span>)
-        };
-        <span class='self'>self</span>.<span class='ident'>rv_to_result</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>)
-    }
-
     <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>unix</span>)]</span>
     <span class='doccomment'>/// Establish a TLS connection over the given socket</span>
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>connect_socket</span><span class='op'>&lt;</span><span class='ident'>F</span>: <span class='ident'>IntoRawFd</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>fd</span>: <span class='ident'>F</span>, <span class='ident'>servername</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span>()<span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>connect_socket</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>fd</span>: <span class='ident'>RawFd</span>, <span class='ident'>servername</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span>()<span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
             <span class='kw'>let</span> <span class='ident'>servername_c</span> <span class='op'>=</span> <span class='ident'>str_c_ptr</span>(<span class='ident'>servername</span>);
-            <span class='ident'>ffi</span>::<span class='ident'>tls_connect_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='ident'>fd</span>.<span class='ident'>into_raw_fd</span>(), <span class='ident'>servername_c</span>)
+            <span class='ident'>ffi</span>::<span class='ident'>tls_connect_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='ident'>fd</span>, <span class='ident'>servername_c</span>)
         };
         <span class='self'>self</span>.<span class='ident'>rv_to_result</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>)
     }
 
     <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>windows</span>)]</span>
     <span class='doccomment'>/// Establish a TLS connection over the given socket</span>
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>connect_socket</span><span class='op'>&lt;</span><span class='ident'>F</span>: <span class='ident'>IntoRawSocket</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>fd</span>: <span class='ident'>F</span>, <span class='ident'>servername</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span>()<span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>connect_socket</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>sock</span>: <span class='ident'>RawSocket</span>, <span class='ident'>servername</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span>()<span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
             <span class='kw'>let</span> <span class='ident'>servername_c</span> <span class='op'>=</span> <span class='ident'>str_c_ptr</span>(<span class='ident'>servername</span>);
             <span class='comment'>// This cast is not exactly safe</span>
             <span class='comment'>// http://stackoverflow.com/questions/1953639/</span>
-            <span class='ident'>ffi</span>::<span class='ident'>tls_connect_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='ident'>fd</span>.<span class='ident'>into_raw_socket</span>() <span class='kw'>as</span> <span class='ident'>i32</span>, <span class='ident'>servername_c</span>)
+            <span class='ident'>ffi</span>::<span class='ident'>tls_connect_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='ident'>sock</span> <span class='kw'>as</span> <span class='ident'>i32</span>, <span class='ident'>servername_c</span>)
         };
         <span class='self'>self</span>.<span class='ident'>rv_to_result</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>)
     }
@@ -851,9 +818,9 @@
 
     <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>unix</span>)]</span>
     <span class='doccomment'>/// Accept a new TLS connection over an existing socket</span>
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>accept_socket</span><span class='op'>&lt;</span><span class='ident'>F</span>: <span class='ident'>IntoRawFd</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>fd</span>: <span class='ident'>F</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>TlsContext</span><span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>accept_socket</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>fd</span>: <span class='ident'>RawFd</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>TlsContext</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cctx</span>: <span class='ident'>ffi</span>::<span class='ident'>Tls</span> <span class='op'>=</span> <span class='ident'>ptr</span>::<span class='ident'>null_mut</span>();;
-        <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>ffi</span>::<span class='ident'>tls_accept_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>cctx</span>, <span class='ident'>fd</span>.<span class='ident'>into_raw_fd</span>()) };
+        <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>ffi</span>::<span class='ident'>tls_accept_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>cctx</span>, <span class='ident'>fd</span>) };
         <span class='self'>self</span>.<span class='ident'>rv_to_result</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>)
             .<span class='ident'>map</span>(<span class='op'>|</span>_<span class='op'>|</span> {
                 <span class='ident'>TlsContext</span> {
@@ -865,12 +832,12 @@
 
     <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>windows</span>)]</span>
     <span class='doccomment'>/// Accept a new TLS connection over an existing socket</span>
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>accept_socket</span><span class='op'>&lt;</span><span class='ident'>F</span>: <span class='ident'>IntoRawSocket</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>fd</span>: <span class='ident'>F</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>TlsContext</span><span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>accept_socket</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>sock</span>: <span class='ident'>RawSocket</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>TlsContext</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cctx</span>: <span class='ident'>ffi</span>::<span class='ident'>Tls</span> <span class='op'>=</span> <span class='ident'>ptr</span>::<span class='ident'>null_mut</span>();;
         <span class='comment'>// This cast is not exactly safe</span>
         <span class='comment'>// http://stackoverflow.com/questions/1953639/</span>
         <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
-            <span class='ident'>ffi</span>::<span class='ident'>tls_accept_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>cctx</span>, <span class='ident'>fd</span>.<span class='ident'>into_raw_socket</span>() <span class='kw'>as</span> <span class='ident'>i32</span>)
+            <span class='ident'>ffi</span>::<span class='ident'>tls_accept_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>cctx</span>, <span class='ident'>sock</span> <span class='kw'>as</span> <span class='ident'>i32</span>)
         };
         <span class='self'>self</span>.<span class='ident'>rv_to_result</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>)
             .<span class='ident'>map</span>(<span class='op'>|</span>_<span class='op'>|</span> {
@@ -961,6 +928,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

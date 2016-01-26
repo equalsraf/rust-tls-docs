@@ -59,7 +59,7 @@ var data = {lines:[
 {"lineNum":"   58","line":"\tif (ctx->ssl_peer_cert == NULL)","class":"lineCov","hits":"1","order":"184",},
 {"lineNum":"   59","line":"\t\treturn (0);","class":"lineCov","hits":"1","order":"185",},
 {"lineNum":"   60","line":""},
-{"lineNum":"   61","line":"\treturn (tls_check_name(ctx, ctx->ssl_peer_cert, name) == 0);","class":"lineCov","hits":"1","order":"647",},
+{"lineNum":"   61","line":"\treturn (tls_check_name(ctx, ctx->ssl_peer_cert, name) == 0);","class":"lineCov","hits":"1","order":"606",},
 {"lineNum":"   62","line":"}","class":"lineCov","hits":"1","order":"186",},
 {"lineNum":"   63","line":""},
 {"lineNum":"   64","line":"time_t"},
@@ -67,9 +67,9 @@ var data = {lines:[
 {"lineNum":"   66","line":"{","class":"lineCov","hits":"1","order":"138",},
 {"lineNum":"   67","line":"\tif (ctx->ssl_peer_cert == NULL)","class":"lineCov","hits":"1","order":"139",},
 {"lineNum":"   68","line":"\t\treturn (-1);","class":"lineCov","hits":"1","order":"140",},
-{"lineNum":"   69","line":"\tif (ctx->conninfo == NULL)","class":"lineCov","hits":"1","order":"648",},
+{"lineNum":"   69","line":"\tif (ctx->conninfo == NULL)","class":"lineCov","hits":"1","order":"607",},
 {"lineNum":"   70","line":"\t\treturn (-1);","class":"lineNoCov","hits":"0",},
-{"lineNum":"   71","line":"\treturn (ctx->conninfo->notbefore);","class":"lineCov","hits":"1","order":"649",},
+{"lineNum":"   71","line":"\treturn (ctx->conninfo->notbefore);","class":"lineCov","hits":"1","order":"608",},
 {"lineNum":"   72","line":"}","class":"lineCov","hits":"1","order":"141",},
 {"lineNum":"   73","line":""},
 {"lineNum":"   74","line":"time_t"},
@@ -77,12 +77,12 @@ var data = {lines:[
 {"lineNum":"   76","line":"{","class":"lineCov","hits":"1","order":"152",},
 {"lineNum":"   77","line":"\tif (ctx->ssl_peer_cert == NULL)","class":"lineCov","hits":"1","order":"153",},
 {"lineNum":"   78","line":"\t\treturn (-1);","class":"lineCov","hits":"1","order":"154",},
-{"lineNum":"   79","line":"\tif (ctx->conninfo == NULL)","class":"lineCov","hits":"1","order":"650",},
+{"lineNum":"   79","line":"\tif (ctx->conninfo == NULL)","class":"lineCov","hits":"1","order":"609",},
 {"lineNum":"   80","line":"\t\treturn (-1);","class":"lineNoCov","hits":"0",},
-{"lineNum":"   81","line":"\treturn (ctx->conninfo->notafter);","class":"lineCov","hits":"1","order":"651",},
+{"lineNum":"   81","line":"\treturn (ctx->conninfo->notafter);","class":"lineCov","hits":"1","order":"610",},
 {"lineNum":"   82","line":"}","class":"lineCov","hits":"1","order":"155",},
 {"lineNum":"   83","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-c00d5486bf2a262a", "date" : "2016-01-12 16:25:57", "instrumented" : 37, "covered" : 32,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-26 13:41:48", "instrumented" : 37, "covered" : 32,};
 var merged_data = [];
