@@ -52,7 +52,7 @@ var data = {lines:[
 {"lineNum":"   51","line":"#[cfg(unix)]"},
 {"lineNum":"   52","line":"use std::os::unix::io::AsRawFd;"},
 {"lineNum":"   53","line":"#[cfg(windows)]"},
-{"lineNum":"   54","line":"use std::os::windows::io::AsRawFd;"},
+{"lineNum":"   54","line":"use std::os::windows::io::AsRawSocket;"},
 {"lineNum":"   55","line":""},
 {"lineNum":"   56","line":"mod util;"},
 {"lineNum":"   57","line":"mod raw;"},
@@ -397,5 +397,5 @@ var data = {lines:[
 {"lineNum":"  396","line":"}","class":"linePartCov","hits":"1","order":"520","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-25 23:46:50", "instrumented" : 19, "covered" : 19,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-26 00:01:39", "instrumented" : 19, "covered" : 19,};
 var merged_data = [];
