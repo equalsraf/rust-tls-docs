@@ -725,7 +725,7 @@
         <span class='kw'>if</span> <span class='ident'>rv</span> <span class='op'>==</span> <span class='op'>-</span><span class='number'>1</span> {
             <span class='prelude-val'>Err</span>(<span class='ident'>TlsError</span>::<span class='ident'>new</span>(<span class='string'>&quot;Unable to get certificate information&quot;</span>))
         } <span class='kw'>else</span> {
-            <span class='prelude-val'>Ok</span>(<span class='ident'>DateTime</span>::<span class='ident'>from_utc</span>(<span class='ident'>NaiveDateTime</span>::<span class='ident'>from_timestamp</span>(<span class='ident'>rv</span>, <span class='number'>0</span>), <span class='ident'>UTC</span>))
+            <span class='prelude-val'>Ok</span>(<span class='ident'>DateTime</span>::<span class='ident'>from_utc</span>(<span class='ident'>NaiveDateTime</span>::<span class='ident'>from_timestamp</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>, <span class='number'>0</span>), <span class='ident'>UTC</span>))
         }
     }
 
@@ -734,7 +734,7 @@
         <span class='kw'>if</span> <span class='ident'>rv</span> <span class='op'>==</span> <span class='op'>-</span><span class='number'>1</span> {
             <span class='prelude-val'>Err</span>(<span class='ident'>TlsError</span>::<span class='ident'>new</span>(<span class='string'>&quot;Unable to get certificate information&quot;</span>))
         } <span class='kw'>else</span> {
-            <span class='prelude-val'>Ok</span>(<span class='ident'>DateTime</span>::<span class='ident'>from_utc</span>(<span class='ident'>NaiveDateTime</span>::<span class='ident'>from_timestamp</span>(<span class='ident'>rv</span>, <span class='number'>0</span>), <span class='ident'>UTC</span>))
+            <span class='prelude-val'>Ok</span>(<span class='ident'>DateTime</span>::<span class='ident'>from_utc</span>(<span class='ident'>NaiveDateTime</span>::<span class='ident'>from_timestamp</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>, <span class='number'>0</span>), <span class='ident'>UTC</span>))
         }
     }
 

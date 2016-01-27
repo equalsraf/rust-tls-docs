@@ -263,7 +263,7 @@ var data = {lines:[
 {"lineNum":"  262","line":"        if rv == -1 {","class":"lineCov","hits":"1","order":"69",},
 {"lineNum":"  263","line":"            Err(TlsError::new(\"Unable to get certificate information\"))","class":"lineCov","hits":"1","order":"70",},
 {"lineNum":"  264","line":"        } else {"},
-{"lineNum":"  265","line":"            Ok(DateTime::from_utc(NaiveDateTime::from_timestamp(rv, 0), UTC))","class":"lineCov","hits":"1","order":"822",},
+{"lineNum":"  265","line":"            Ok(DateTime::from_utc(NaiveDateTime::from_timestamp(rv as i64, 0), UTC))","class":"lineCov","hits":"1","order":"822",},
 {"lineNum":"  266","line":"        }"},
 {"lineNum":"  267","line":"    }","class":"lineCov","hits":"1","order":"75",},
 {"lineNum":"  268","line":""},
@@ -272,7 +272,7 @@ var data = {lines:[
 {"lineNum":"  271","line":"        if rv == -1 {","class":"lineCov","hits":"1","order":"83",},
 {"lineNum":"  272","line":"            Err(TlsError::new(\"Unable to get certificate information\"))","class":"lineCov","hits":"1","order":"84",},
 {"lineNum":"  273","line":"        } else {"},
-{"lineNum":"  274","line":"            Ok(DateTime::from_utc(NaiveDateTime::from_timestamp(rv, 0), UTC))","class":"lineCov","hits":"1","order":"825",},
+{"lineNum":"  274","line":"            Ok(DateTime::from_utc(NaiveDateTime::from_timestamp(rv as i64, 0), UTC))","class":"lineCov","hits":"1","order":"825",},
 {"lineNum":"  275","line":"        }"},
 {"lineNum":"  276","line":"    }","class":"lineCov","hits":"1","order":"85",},
 {"lineNum":"  277","line":""},
@@ -420,5 +420,5 @@ var data = {lines:[
 {"lineNum":"  419","line":"}","class":"lineCov","hits":"1","order":"801",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 01:24:15", "instrumented" : 212, "covered" : 189,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 10:08:18", "instrumented" : 212, "covered" : 189,};
 var merged_data = [];
