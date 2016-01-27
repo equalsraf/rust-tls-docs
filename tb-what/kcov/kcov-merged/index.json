@@ -1,0 +1,16 @@
+var data = {files:[
+{"link":"tls.c.f83f9a66.html","title":"tls.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls.c","covered_class":"linePartCov","covered":"69.0","covered_lines":"196","uncovered_lines":"88","total_lines" : "284"},
+{"link":"tls_util.c.ba62723d.html","title":"tls_util.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_util.c","covered_class":"lineNoCov","covered":"0.0","covered_lines":"0","uncovered_lines":"86","total_lines" : "86"},
+{"link":"util.rs.9c5a0a29.html","title":"util.rs","summary_name":"[...]/equalsraf/rust-tls/tls/src/util.rs","covered_class":"lineCov","covered":"100.0","covered_lines":"13","uncovered_lines":"0","total_lines" : "13"},
+{"link":"raw.rs.4bb28317.html","title":"raw.rs","summary_name":"[...]/equalsraf/rust-tls/tls/src/raw.rs","covered_class":"lineCov","covered":"89.2","covered_lines":"189","uncovered_lines":"23","total_lines" : "212"},
+{"link":"tls_client.c.2b0eac41.html","title":"tls_client.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_client.c","covered_class":"linePartCov","covered":"36.9","covered_lines":"52","uncovered_lines":"89","total_lines" : "141"},
+{"link":"tls_config.c.c3f4d924.html","title":"tls_config.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_config.c","covered_class":"lineCov","covered":"79.0","covered_lines":"147","uncovered_lines":"39","total_lines" : "186"},
+{"link":"tls_peer.c.eb416c7e.html","title":"tls_peer.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_peer.c","covered_class":"lineCov","covered":"86.5","covered_lines":"32","uncovered_lines":"5","total_lines" : "37"},
+{"link":"tls_conninfo.c.f9c7c6b3.html","title":"tls_conninfo.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_conninfo.c","covered_class":"linePartCov","covered":"72.1","covered_lines":"93","uncovered_lines":"36","total_lines" : "129"},
+{"link":"lib.rs.25d90c90.html","title":"lib.rs","summary_name":"[...]/equalsraf/rust-tls/tls/src/lib.rs","covered_class":"lineCov","covered":"92.1","covered_lines":"139","uncovered_lines":"12","total_lines" : "151"},
+{"link":"tls_verify.c.eb407238.html","title":"tls_verify.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_verify.c","covered_class":"linePartCov","covered":"44.4","covered_lines":"48","uncovered_lines":"60","total_lines" : "108"},
+{"link":"tls_server.c.5ff03c00.html","title":"tls_server.c","summary_name":"[...]/equalsraf/rust-tls/libressl-2.3.1/tls/tls_server.c","covered_class":"linePartCov","covered":"56.2","covered_lines":"50","uncovered_lines":"39","total_lines" : "89"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 00:21:47", "instrumented" : 1436, "covered" : 959,};
+var merged_data = [];
