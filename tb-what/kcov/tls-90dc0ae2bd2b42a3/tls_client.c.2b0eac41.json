@@ -34,16 +34,16 @@ var data = {lines:[
 {"lineNum":"   33","line":""},
 {"lineNum":"   34","line":"struct tls *"},
 {"lineNum":"   35","line":"tls_client(void)"},
-{"lineNum":"   36","line":"{","class":"lineCov","hits":"1","order":"151","possible_hits":"1",},
+{"lineNum":"   36","line":"{","class":"lineCov","hits":"1","order":"13","possible_hits":"1",},
 {"lineNum":"   37","line":"\tstruct tls *ctx;"},
 {"lineNum":"   38","line":""},
-{"lineNum":"   39","line":"\tif ((ctx = tls_new()) == NULL)","class":"lineCov","hits":"1","order":"152","possible_hits":"1",},
+{"lineNum":"   39","line":"\tif ((ctx = tls_new()) == NULL)","class":"lineCov","hits":"1","order":"14","possible_hits":"1",},
 {"lineNum":"   40","line":"\t\treturn (NULL);","class":"lineNoCov","hits":"0","possible_hits":"1",},
 {"lineNum":"   41","line":""},
-{"lineNum":"   42","line":"\tctx->flags |= TLS_CLIENT;","class":"lineCov","hits":"1","order":"180","possible_hits":"1",},
+{"lineNum":"   42","line":"\tctx->flags |= TLS_CLIENT;","class":"lineCov","hits":"1","order":"42","possible_hits":"1",},
 {"lineNum":"   43","line":""},
-{"lineNum":"   44","line":"\treturn (ctx);","class":"lineCov","hits":"1","order":"181","possible_hits":"1",},
-{"lineNum":"   45","line":"}","class":"lineCov","hits":"1","order":"182","possible_hits":"1",},
+{"lineNum":"   44","line":"\treturn (ctx);","class":"lineCov","hits":"1","order":"43","possible_hits":"1",},
+{"lineNum":"   45","line":"}","class":"lineCov","hits":"1","order":"44","possible_hits":"1",},
 {"lineNum":"   46","line":""},
 {"lineNum":"   47","line":"int"},
 {"lineNum":"   48","line":"tls_connect(struct tls *ctx, const char *host, const char *port)"},
@@ -286,5 +286,5 @@ var data = {lines:[
 {"lineNum":"  285","line":"}","class":"lineNoCov","hits":"0","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 00:21:47", "instrumented" : 141, "covered" : 5,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 01:24:15", "instrumented" : 141, "covered" : 5,};
 var merged_data = [];
