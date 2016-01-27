@@ -1,8 +1,8 @@
 var data = {files:[
 {"link":"test_client-a00572d5e2537e3e/index.html","title":"test_client-a00572d5e2537e3e","summary_name":"test_client-a00572d5e2537e3e","covered_class":"linePartCov","covered":"56.3","covered_lines":"796","uncovered_lines":"618","total_lines" : "1414"},
 {"link":"test_server-1761e421c9d682fa/index.html","title":"test_server-1761e421c9d682fa","summary_name":"test_server-1761e421c9d682fa","covered_class":"linePartCov","covered":"49.8","covered_lines":"623","uncovered_lines":"629","total_lines" : "1252"},
-{"link":"tls-90dc0ae2bd2b42a3/index.html","title":"tls-90dc0ae2bd2b42a3","summary_name":"tls-90dc0ae2bd2b42a3","covered_class":"lineNoCov","covered":"23.1","covered_lines":"282","uncovered_lines":"940","total_lines" : "1222"},
-], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"67.9","covered_lines":"1031","uncovered_lines":"487","total_lines" : "1518"},
+{"link":"tls-90dc0ae2bd2b42a3/index.html","title":"tls-90dc0ae2bd2b42a3","summary_name":"tls-90dc0ae2bd2b42a3","covered_class":"linePartCov","covered":"53.9","covered_lines":"716","uncovered_lines":"612","total_lines" : "1328"},
+], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"73.6","covered_lines":"1147","uncovered_lines":"411","total_lines" : "1558"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 10:29:20", "instrumented" : 3888, "covered" : 1701,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:14:15", "instrumented" : 3994, "covered" : 2135,};
