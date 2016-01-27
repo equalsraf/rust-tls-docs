@@ -467,21 +467,7 @@ var data = {lines:[
 {"lineNum":"  466","line":"    assert!(cli.connect_servername(\"www.google.com\", \"\", \"\")"},
 {"lineNum":"  467","line":"            .is_err());"},
 {"lineNum":"  468","line":"}"},
-{"lineNum":"  469","line":""},
-{"lineNum":"  470","line":"#[test]"},
-{"lineNum":"  471","line":"fn error_accept_on_client() {"},
-{"lineNum":"  472","line":"    assert!(init());"},
-{"lineNum":"  473","line":"    let mut cli = TlsContext::new_client().unwrap();"},
-{"lineNum":"  474","line":"    assert!(cli.accept_socket(-1).is_err());"},
-{"lineNum":"  475","line":"}"},
-{"lineNum":"  476","line":""},
-{"lineNum":"  477","line":"#[test]"},
-{"lineNum":"  478","line":"fn error_accept_invalid_server() {"},
-{"lineNum":"  479","line":"    assert!(init());"},
-{"lineNum":"  480","line":"    let mut cli = TlsContext::new_server().unwrap();"},
-{"lineNum":"  481","line":"    assert!(cli.accept_socket(-1).is_err());"},
-{"lineNum":"  482","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-27 11:14:14", "instrumented" : 130, "covered" : 98,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-27 11:33:18", "instrumented" : 130, "covered" : 98,};
 var merged_data = [];

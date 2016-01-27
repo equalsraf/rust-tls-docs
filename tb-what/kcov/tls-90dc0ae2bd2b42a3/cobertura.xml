@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.000" version="1.9" timestamp="1453893255">
+<coverage line-rate="0.000" version="1.9" timestamp="1453894400">
 	<sources>
 		<source>/home/travis/</source>
 	</sources>
@@ -657,20 +657,20 @@
 						<line number="309" hits="0"/>
 					</lines>
 				</class>
-				<class name="tls_server_c" filename="build/equalsraf/rust-tls/libressl-2.3.1/tls/tls_server.c" line-rate="0.292">
+				<class name="tls_server_c" filename="build/equalsraf/rust-tls/libressl-2.3.1/tls/tls_server.c" line-rate="0.000">
 					<lines>
-						<line number="27" hits="1"/>
-						<line number="30" hits="1"/>
+						<line number="27" hits="0"/>
+						<line number="30" hits="0"/>
 						<line number="31" hits="0"/>
-						<line number="33" hits="1"/>
-						<line number="35" hits="1"/>
-						<line number="36" hits="1"/>
-						<line number="40" hits="1"/>
-						<line number="43" hits="1"/>
+						<line number="33" hits="0"/>
+						<line number="35" hits="0"/>
+						<line number="36" hits="0"/>
+						<line number="40" hits="0"/>
+						<line number="43" hits="0"/>
 						<line number="44" hits="0"/>
-						<line number="46" hits="1"/>
-						<line number="48" hits="1"/>
-						<line number="49" hits="1"/>
+						<line number="46" hits="0"/>
+						<line number="48" hits="0"/>
+						<line number="49" hits="0"/>
 						<line number="53" hits="0"/>
 						<line number="57" hits="0"/>
 						<line number="58" hits="0"/>
@@ -708,20 +708,20 @@
 						<line number="107" hits="0"/>
 						<line number="110" hits="0"/>
 						<line number="111" hits="0"/>
-						<line number="115" hits="1"/>
-						<line number="116" hits="1"/>
-						<line number="117" hits="1"/>
-						<line number="121" hits="1"/>
-						<line number="122" hits="1"/>
-						<line number="124" hits="1"/>
-						<line number="125" hits="1"/>
-						<line number="126" hits="1"/>
-						<line number="129" hits="1"/>
+						<line number="115" hits="0"/>
+						<line number="116" hits="0"/>
+						<line number="117" hits="0"/>
+						<line number="121" hits="0"/>
+						<line number="122" hits="0"/>
+						<line number="124" hits="0"/>
+						<line number="125" hits="0"/>
+						<line number="126" hits="0"/>
+						<line number="129" hits="0"/>
 						<line number="130" hits="0"/>
 						<line number="131" hits="0"/>
-						<line number="134" hits="1"/>
-						<line number="135" hits="1"/>
-						<line number="136" hits="1"/>
+						<line number="134" hits="0"/>
+						<line number="135" hits="0"/>
+						<line number="136" hits="0"/>
 						<line number="138" hits="0"/>
 						<line number="139" hits="0"/>
 						<line number="140" hits="0"/>
@@ -731,10 +731,10 @@
 						<line number="145" hits="0"/>
 						<line number="148" hits="0"/>
 						<line number="150" hits="0"/>
-						<line number="153" hits="1"/>
-						<line number="155" hits="1"/>
-						<line number="157" hits="1"/>
-						<line number="158" hits="1"/>
+						<line number="153" hits="0"/>
+						<line number="155" hits="0"/>
+						<line number="157" hits="0"/>
+						<line number="158" hits="0"/>
 						<line number="162" hits="0"/>
 						<line number="164" hits="0"/>
 						<line number="166" hits="0"/>
@@ -750,7 +750,7 @@
 						<line number="182" hits="0"/>
 					</lines>
 				</class>
-				<class name="tls_c" filename="build/equalsraf/rust-tls/libressl-2.3.1/tls/tls.c" line-rate="0.440">
+				<class name="tls_c" filename="build/equalsraf/rust-tls/libressl-2.3.1/tls/tls.c" line-rate="0.437">
 					<lines>
 						<line number="38" hits="1"/>
 						<line number="41" hits="1"/>
@@ -911,7 +911,7 @@
 						<line number="300" hits="1"/>
 						<line number="304" hits="1"/>
 						<line number="305" hits="1"/>
-						<line number="306" hits="1"/>
+						<line number="306" hits="0"/>
 						<line number="307" hits="1"/>
 						<line number="308" hits="1"/>
 						<line number="309" hits="1"/>
@@ -1171,9 +1171,9 @@
 						<line number="214" hits="1"/>
 					</lines>
 				</class>
-				<class name="raw_rs" filename="build/equalsraf/rust-tls/tls/src/raw.rs" line-rate="0.876">
+				<class name="raw_rs" filename="build/equalsraf/rust-tls/tls/src/raw.rs" line-rate="0.884">
 					<lines>
-						<line number="2" hits="10"/>
+						<line number="2" hits="6"/>
 						<line number="25" hits="0"/>
 						<line number="27" hits="0"/>
 						<line number="28" hits="0"/>
@@ -1286,20 +1286,6 @@
 						<line number="349" hits="1"/>
 						<line number="350" hits="3"/>
 						<line number="351" hits="1"/>
-						<line number="373" hits="1"/>
-						<line number="374" hits="1"/>
-						<line number="375" hits="1"/>
-						<line number="376" hits="0"/>
-						<line number="379" hits="1"/>
-						<line number="383" hits="1"/>
-						<line number="387" hits="1"/>
-						<line number="388" hits="1"/>
-						<line number="389" hits="1"/>
-						<line number="390" hits="1"/>
-						<line number="391" hits="0"/>
-						<line number="393" hits="0"/>
-						<line number="396" hits="0"/>
-						<line number="397" hits="1"/>
 						<line number="419" hits="1"/>
 						<line number="421" hits="1"/>
 						<line number="423" hits="1"/>
@@ -1333,16 +1319,6 @@
 						<line number="465" hits="1"/>
 						<line number="466" hits="2"/>
 						<line number="468" hits="1"/>
-						<line number="471" hits="1"/>
-						<line number="472" hits="1"/>
-						<line number="473" hits="1"/>
-						<line number="474" hits="2"/>
-						<line number="475" hits="1"/>
-						<line number="478" hits="1"/>
-						<line number="479" hits="1"/>
-						<line number="480" hits="1"/>
-						<line number="481" hits="2"/>
-						<line number="482" hits="1"/>
 					</lines>
 				</class>
 				<class name="tls_peer_c" filename="build/equalsraf/rust-tls/libressl-2.3.1/tls/tls_peer.c" line-rate="0.730">

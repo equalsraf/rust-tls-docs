@@ -441,10 +441,10 @@ var data = {lines:[
 {"lineNum":"  440","line":"    ($t:ty, $min:expr, $max:expr) => {"},
 {"lineNum":"  441","line":"        impl Bounded for $t {"},
 {"lineNum":"  442","line":"            #[inline]"},
-{"lineNum":"  443","line":"            fn min_value() -> $t { $min }","class":"linePartCov","hits":"2","order":"1082","possible_hits":"3",},
+{"lineNum":"  443","line":"            fn min_value() -> $t { $min }","class":"linePartCov","hits":"2","order":"1057","possible_hits":"3",},
 {"lineNum":"  444","line":""},
 {"lineNum":"  445","line":"            #[inline]"},
-{"lineNum":"  446","line":"            fn max_value() -> $t { $max }","class":"linePartCov","hits":"2","order":"1084","possible_hits":"3",},
+{"lineNum":"  446","line":"            fn max_value() -> $t { $max }","class":"linePartCov","hits":"2","order":"1059","possible_hits":"3",},
 {"lineNum":"  447","line":"        }"},
 {"lineNum":"  448","line":"    }"},
 {"lineNum":"  449","line":"}"},
@@ -980,13 +980,13 @@ var data = {lines:[
 {"lineNum":"  979","line":"macro_rules! impl_to_primitive_int_to_int {"},
 {"lineNum":"  980","line":"    ($SrcT:ty, $DstT:ty, $slf:expr) => ("},
 {"lineNum":"  981","line":"        {"},
-{"lineNum":"  982","line":"            if size_of::<$SrcT>() <= size_of::<$DstT>() {","class":"lineCov","hits":"1","order":"1080","possible_hits":"1",},
+{"lineNum":"  982","line":"            if size_of::<$SrcT>() <= size_of::<$DstT>() {","class":"lineCov","hits":"1","order":"1055","possible_hits":"1",},
 {"lineNum":"  983","line":"                Some($slf as $DstT)"},
 {"lineNum":"  984","line":"            } else {"},
 {"lineNum":"  985","line":"                let n = $slf as i64;"},
-{"lineNum":"  986","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1081","possible_hits":"1",},
-{"lineNum":"  987","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1083","possible_hits":"1",},
-{"lineNum":"  988","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"1085","possible_hits":"1",},
+{"lineNum":"  986","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1056","possible_hits":"1",},
+{"lineNum":"  987","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1058","possible_hits":"1",},
+{"lineNum":"  988","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"1062","possible_hits":"1",},
 {"lineNum":"  989","line":"                    Some($slf as $DstT)"},
 {"lineNum":"  990","line":"                } else {"},
 {"lineNum":"  991","line":"                    None"},
@@ -1020,7 +1020,7 @@ var data = {lines:[
 {"lineNum":" 1019","line":"            #[inline]"},
 {"lineNum":" 1020","line":"            fn to_i16(&self) -> Option<i16> { impl_to_primitive_int_to_int!($T, i16, *self) }"},
 {"lineNum":" 1021","line":"            #[inline]"},
-{"lineNum":" 1022","line":"            fn to_i32(&self) -> Option<i32> { impl_to_primitive_int_to_int!($T, i32, *self) }","class":"linePartCov","hits":"2","order":"1079","possible_hits":"3",},
+{"lineNum":" 1022","line":"            fn to_i32(&self) -> Option<i32> { impl_to_primitive_int_to_int!($T, i32, *self) }","class":"linePartCov","hits":"2","order":"1054","possible_hits":"3",},
 {"lineNum":" 1023","line":"            #[inline]"},
 {"lineNum":" 1024","line":"            fn to_i64(&self) -> Option<i64> { impl_to_primitive_int_to_int!($T, i64, *self) }"},
 {"lineNum":" 1025","line":""},
@@ -2451,5 +2451,5 @@ var data = {lines:[
 {"lineNum":" 2450","line":"float_impl!(f64 integer_decode_f64);"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-a00572d5e2537e3e", "date" : "2016-01-27 11:14:08", "instrumented" : 7, "covered" : 7,};
+var header = { "command" : "test_client-a00572d5e2537e3e", "date" : "2016-01-27 11:33:12", "instrumented" : 7, "covered" : 7,};
 var merged_data = [];
