@@ -299,15 +299,15 @@ var data = {lines:[
 {"lineNum":"  298","line":""},
 {"lineNum":"  299","line":"void"},
 {"lineNum":"  300","line":"tls_config_insecure_noverifycert(struct tls_config *config)"},
-{"lineNum":"  301","line":"{","class":"lineCov","hits":"1","order":"647","possible_hits":"1",},
-{"lineNum":"  302","line":"\tconfig->verify_cert = 0;","class":"lineCov","hits":"1","order":"648","possible_hits":"1",},
-{"lineNum":"  303","line":"}","class":"lineCov","hits":"1","order":"649","possible_hits":"1",},
+{"lineNum":"  301","line":"{","class":"lineCov","hits":"1","order":"651","possible_hits":"1",},
+{"lineNum":"  302","line":"\tconfig->verify_cert = 0;","class":"lineCov","hits":"1","order":"652","possible_hits":"1",},
+{"lineNum":"  303","line":"}","class":"lineCov","hits":"1","order":"653","possible_hits":"1",},
 {"lineNum":"  304","line":""},
 {"lineNum":"  305","line":"void"},
 {"lineNum":"  306","line":"tls_config_insecure_noverifyname(struct tls_config *config)"},
-{"lineNum":"  307","line":"{","class":"lineCov","hits":"1","order":"635","possible_hits":"1",},
-{"lineNum":"  308","line":"\tconfig->verify_name = 0;","class":"lineCov","hits":"1","order":"636","possible_hits":"1",},
-{"lineNum":"  309","line":"}","class":"lineCov","hits":"1","order":"637","possible_hits":"1",},
+{"lineNum":"  307","line":"{","class":"lineCov","hits":"1","order":"639","possible_hits":"1",},
+{"lineNum":"  308","line":"\tconfig->verify_name = 0;","class":"lineCov","hits":"1","order":"640","possible_hits":"1",},
+{"lineNum":"  309","line":"}","class":"lineCov","hits":"1","order":"641","possible_hits":"1",},
 {"lineNum":"  310","line":""},
 {"lineNum":"  311","line":"void"},
 {"lineNum":"  312","line":"tls_config_insecure_noverifytime(struct tls_config *config)"},
@@ -336,5 +336,5 @@ var data = {lines:[
 {"lineNum":"  335","line":"}","class":"lineNoCov","hits":"0","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-27 10:08:17", "instrumented" : 186, "covered" : 103,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-27 10:29:18", "instrumented" : 186, "covered" : 103,};
 var merged_data = [];

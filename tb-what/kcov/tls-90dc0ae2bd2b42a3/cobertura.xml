@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.000" version="1.9" timestamp="1453889299">
+<coverage line-rate="0.000" version="1.9" timestamp="1453890560">
 	<sources>
 		<source>/home/travis/</source>
 	</sources>
@@ -113,23 +113,23 @@
 				<class name="lib_rs" filename="build/equalsraf/rust-tls/tls/src/lib.rs" line-rate="1.000">
 					<lines>
 						<line number="2" hits="8"/>
-						<line number="382" hits="1"/>
-						<line number="383" hits="1"/>
-						<line number="386" hits="1"/>
-						<line number="387" hits="1"/>
-						<line number="388" hits="1"/>
-						<line number="389" hits="1"/>
-						<line number="390" hits="1"/>
-						<line number="391" hits="1"/>
-						<line number="392" hits="1"/>
-						<line number="393" hits="1"/>
-						<line number="396" hits="1"/>
-						<line number="397" hits="1"/>
+						<line number="394" hits="1"/>
+						<line number="395" hits="1"/>
+						<line number="398" hits="1"/>
+						<line number="399" hits="1"/>
 						<line number="400" hits="1"/>
 						<line number="401" hits="1"/>
-						<line number="406" hits="1"/>
-						<line number="407" hits="1"/>
+						<line number="402" hits="1"/>
+						<line number="403" hits="1"/>
+						<line number="404" hits="1"/>
+						<line number="405" hits="1"/>
+						<line number="408" hits="1"/>
+						<line number="409" hits="1"/>
+						<line number="412" hits="1"/>
 						<line number="413" hits="1"/>
+						<line number="418" hits="1"/>
+						<line number="419" hits="1"/>
+						<line number="425" hits="1"/>
 					</lines>
 				</class>
 				<class name="datetime_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/chrono-0.2.18/src/datetime.rs" line-rate="0.000">

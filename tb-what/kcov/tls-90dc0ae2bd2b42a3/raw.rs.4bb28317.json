@@ -43,7 +43,7 @@ var data = {lines:[
 {"lineNum":"   42","line":"    pub fn wants_more(&self) -> bool {"},
 {"lineNum":"   43","line":"        self.want_pollin() || self.want_pollout()"},
 {"lineNum":"   44","line":"    }"},
-{"lineNum":"   45","line":"    fn new<S: Into<String>>(msg: S) -> TlsError {","class":"lineCov","hits":"2","order":"137","possible_hits":"2",},
+{"lineNum":"   45","line":"    pub fn new<S: Into<String>>(msg: S) -> TlsError {","class":"lineCov","hits":"2","order":"137","possible_hits":"2",},
 {"lineNum":"   46","line":"        TlsError {"},
 {"lineNum":"   47","line":"            msg: msg.into(),","class":"lineCov","hits":"2","order":"138","possible_hits":"2",},
 {"lineNum":"   48","line":"            code: -1,","class":"lineCov","hits":"2","order":"244","possible_hits":"2",},
@@ -420,5 +420,5 @@ var data = {lines:[
 {"lineNum":"  419","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 10:08:19", "instrumented" : 71, "covered" : 64,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 10:29:20", "instrumented" : 71, "covered" : 64,};
 var merged_data = [];
