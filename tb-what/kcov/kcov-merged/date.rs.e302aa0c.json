@@ -2322,5 +2322,5 @@ var data = {lines:[
 {"lineNum":" 2321","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:33:19", "instrumented" : 38, "covered" : 36,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:48:57", "instrumented" : 38, "covered" : 36,};
 var merged_data = [];

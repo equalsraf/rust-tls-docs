@@ -953,9 +953,9 @@
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cfg</span> <span class='op'>=</span> <span class='ident'>TlsConfig</span>::<span class='ident'>new</span>().<span class='ident'>unwrap</span>();
     <span class='ident'>cfg</span>.<span class='ident'>set_ca_file</span>(<span class='string'>&quot;tests/cert.pem&quot;</span>).<span class='ident'>unwrap</span>();
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cli</span> <span class='op'>=</span> <span class='ident'>TlsContext</span>::<span class='ident'>new_client</span>().<span class='ident'>unwrap</span>();
+    <span class='ident'>cli</span>.<span class='ident'>configure</span>(<span class='ident'>cfg</span>).<span class='ident'>unwrap</span>();
     <span class='ident'>cli</span>.<span class='ident'>connect_servername</span>(<span class='string'>&quot;www.google.com&quot;</span>, <span class='string'>&quot;443&quot;</span>, <span class='string'>&quot;&quot;</span>)
        .<span class='ident'>unwrap</span>();
-    <span class='ident'>cli</span>.<span class='ident'>configure</span>(<span class='ident'>cfg</span>).<span class='ident'>unwrap</span>();
     <span class='ident'>cli</span>.<span class='ident'>handshake</span>().<span class='ident'>unwrap</span>();
 }
 

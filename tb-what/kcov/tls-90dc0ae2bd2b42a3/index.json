@@ -18,5 +18,5 @@ var data = {files:[
 {"link":"util.rs.9c5a0a29.html","title":"util.rs","summary_name":"/home/travis/build/equalsraf/rust-tls/tls/src/util.rs","covered_class":"lineCov","covered":"100.0","covered_lines":"13","uncovered_lines":"0","total_lines" : "13"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:33:20", "instrumented" : 1304, "covered" : 669,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:48:58", "instrumented" : 1304, "covered" : 669,};
 var merged_data = [];

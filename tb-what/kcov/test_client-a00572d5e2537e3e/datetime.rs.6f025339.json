@@ -41,8 +41,8 @@ var data = {lines:[
 {"lineNum":"   40","line":"    ///"},
 {"lineNum":"   41","line":"    /// Panics on the out-of-range number of seconds and/or invalid nanosecond."},
 {"lineNum":"   42","line":"    #[inline]"},
-{"lineNum":"   43","line":"    pub fn from_timestamp(secs: i64, nsecs: u32) -> NaiveDateTime {","class":"linePartCov","hits":"2","order":"1009","possible_hits":"3",},
-{"lineNum":"   44","line":"        let datetime = NaiveDateTime::from_timestamp_opt(secs, nsecs);","class":"lineCov","hits":"1","order":"1013","possible_hits":"1",},
+{"lineNum":"   43","line":"    pub fn from_timestamp(secs: i64, nsecs: u32) -> NaiveDateTime {","class":"linePartCov","hits":"2","order":"1036","possible_hits":"3",},
+{"lineNum":"   44","line":"        let datetime = NaiveDateTime::from_timestamp_opt(secs, nsecs);","class":"lineCov","hits":"1","order":"1038","possible_hits":"1",},
 {"lineNum":"   45","line":"        datetime.expect(\"invalid or out-of-range datetime\")","class":"lineCov","hits":"1","order":"1134","possible_hits":"1",},
 {"lineNum":"   46","line":"    }"},
 {"lineNum":"   47","line":""},
@@ -52,10 +52,10 @@ var data = {lines:[
 {"lineNum":"   51","line":"    ///"},
 {"lineNum":"   52","line":"    /// Returns `None` on the out-of-range number of seconds and/or invalid nanosecond."},
 {"lineNum":"   53","line":"    #[inline]"},
-{"lineNum":"   54","line":"    pub fn from_timestamp_opt(secs: i64, nsecs: u32) -> Option<NaiveDateTime> {","class":"linePartCov","hits":"2","order":"1017","possible_hits":"3",},
-{"lineNum":"   55","line":"        let (days, secs) = div_mod_floor(secs, 86400);","class":"lineCov","hits":"1","order":"1021","possible_hits":"1",},
-{"lineNum":"   56","line":"        let date = days.to_i32().and_then(|days| days.checked_add(719163))","class":"lineCov","hits":"3","order":"1052","possible_hits":"3",},
-{"lineNum":"   57","line":"                                .and_then(|days_ce| NaiveDate::from_num_days_from_ce_opt(days_ce));","class":"lineCov","hits":"2","order":"1082","possible_hits":"2",},
+{"lineNum":"   54","line":"    pub fn from_timestamp_opt(secs: i64, nsecs: u32) -> Option<NaiveDateTime> {","class":"linePartCov","hits":"2","order":"1040","possible_hits":"3",},
+{"lineNum":"   55","line":"        let (days, secs) = div_mod_floor(secs, 86400);","class":"lineCov","hits":"1","order":"1042","possible_hits":"1",},
+{"lineNum":"   56","line":"        let date = days.to_i32().and_then(|days| days.checked_add(719163))","class":"lineCov","hits":"3","order":"1060","possible_hits":"3",},
+{"lineNum":"   57","line":"                                .and_then(|days_ce| NaiveDate::from_num_days_from_ce_opt(days_ce));","class":"lineCov","hits":"2","order":"1091","possible_hits":"2",},
 {"lineNum":"   58","line":"        let time = NaiveTime::from_num_seconds_from_midnight_opt(secs as u32, nsecs);","class":"lineCov","hits":"1","order":"1129","possible_hits":"1",},
 {"lineNum":"   59","line":"        match (date, time) {"},
 {"lineNum":"   60","line":"            (Some(date), Some(time)) => Some(NaiveDateTime { date: date, time: time }),","class":"lineCov","hits":"1","order":"1133","possible_hits":"1",},
@@ -532,5 +532,5 @@ var data = {lines:[
 {"lineNum":"  531","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-a00572d5e2537e3e", "date" : "2016-01-27 11:33:12", "instrumented" : 12, "covered" : 11,};
+var header = { "command" : "test_client-a00572d5e2537e3e", "date" : "2016-01-27 11:48:50", "instrumented" : 12, "covered" : 11,};
 var merged_data = [];

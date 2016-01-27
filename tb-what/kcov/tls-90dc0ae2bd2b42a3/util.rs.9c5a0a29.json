@@ -27,22 +27,22 @@ var data = {lines:[
 {"lineNum":"   26","line":"        if s == ptr::null_mut() {","class":"lineCov","hits":"1","order":"98","possible_hits":"1",},
 {"lineNum":"   27","line":"            String::new()","class":"lineCov","hits":"1","order":"99","possible_hits":"1",},
 {"lineNum":"   28","line":"        } else {"},
-{"lineNum":"   29","line":"            let slice = CStr::from_ptr(s);","class":"lineCov","hits":"1","order":"534","possible_hits":"1",},
-{"lineNum":"   30","line":"            String::from_utf8_lossy(slice.to_bytes()).into_owned()","class":"lineCov","hits":"1","order":"535","possible_hits":"1",},
+{"lineNum":"   29","line":"            let slice = CStr::from_ptr(s);","class":"lineCov","hits":"1","order":"582","possible_hits":"1",},
+{"lineNum":"   30","line":"            String::from_utf8_lossy(slice.to_bytes()).into_owned()","class":"lineCov","hits":"1","order":"583","possible_hits":"1",},
 {"lineNum":"   31","line":"        }"},
 {"lineNum":"   32","line":"    }"},
 {"lineNum":"   33","line":"}","class":"linePartCov","hits":"1","order":"116","possible_hits":"2",},
 {"lineNum":"   34","line":""},
 {"lineNum":"   35","line":"/// Get C string ptr, but use NULL if the string is empty."},
 {"lineNum":"   36","line":"/// Because some C functions treat NULL and \"\\0\" differently"},
-{"lineNum":"   37","line":"pub fn str_c_ptr(s: &str) -> *const i8 {","class":"lineCov","hits":"1","order":"466","possible_hits":"1",},
-{"lineNum":"   38","line":"    if s.is_empty() {","class":"lineCov","hits":"1","order":"467","possible_hits":"1",},
-{"lineNum":"   39","line":"        ptr::null()","class":"lineCov","hits":"1","order":"475","possible_hits":"1",},
-{"lineNum":"   40","line":"    } else {","class":"linePartCov","hits":"1","order":"472","possible_hits":"2",},
-{"lineNum":"   41","line":"        unsafe { CString::from_vec_unchecked(s.bytes().collect()).as_ptr() }","class":"lineCov","hits":"2","order":"471","possible_hits":"2",},
+{"lineNum":"   37","line":"pub fn str_c_ptr(s: &str) -> *const i8 {","class":"lineCov","hits":"1","order":"514","possible_hits":"1",},
+{"lineNum":"   38","line":"    if s.is_empty() {","class":"lineCov","hits":"1","order":"515","possible_hits":"1",},
+{"lineNum":"   39","line":"        ptr::null()","class":"lineCov","hits":"1","order":"523","possible_hits":"1",},
+{"lineNum":"   40","line":"    } else {","class":"linePartCov","hits":"1","order":"520","possible_hits":"2",},
+{"lineNum":"   41","line":"        unsafe { CString::from_vec_unchecked(s.bytes().collect()).as_ptr() }","class":"lineCov","hits":"2","order":"519","possible_hits":"2",},
 {"lineNum":"   42","line":"    }"},
-{"lineNum":"   43","line":"}","class":"linePartCov","hits":"1","order":"473","possible_hits":"2",},
+{"lineNum":"   43","line":"}","class":"linePartCov","hits":"1","order":"521","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:33:20", "instrumented" : 13, "covered" : 13,};
+var header = { "command" : "tls-90dc0ae2bd2b42a3", "date" : "2016-01-27 11:48:58", "instrumented" : 13, "covered" : 13,};
 var merged_data = [];

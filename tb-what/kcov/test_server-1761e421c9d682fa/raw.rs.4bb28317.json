@@ -442,9 +442,9 @@ var data = {lines:[
 {"lineNum":"  441","line":"    let mut cfg = TlsConfig::new().unwrap();"},
 {"lineNum":"  442","line":"    cfg.set_ca_file(\"tests/cert.pem\").unwrap();"},
 {"lineNum":"  443","line":"    let mut cli = TlsContext::new_client().unwrap();"},
-{"lineNum":"  444","line":"    cli.connect_servername(\"www.google.com\", \"443\", \"\")"},
-{"lineNum":"  445","line":"       .unwrap();"},
-{"lineNum":"  446","line":"    cli.configure(cfg).unwrap();"},
+{"lineNum":"  444","line":"    cli.configure(cfg).unwrap();"},
+{"lineNum":"  445","line":"    cli.connect_servername(\"www.google.com\", \"443\", \"\")"},
+{"lineNum":"  446","line":"       .unwrap();"},
 {"lineNum":"  447","line":"    cli.handshake().unwrap();"},
 {"lineNum":"  448","line":"}"},
 {"lineNum":"  449","line":""},
@@ -469,5 +469,5 @@ var data = {lines:[
 {"lineNum":"  468","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-27 11:33:18", "instrumented" : 130, "covered" : 98,};
+var header = { "command" : "test_server-1761e421c9d682fa", "date" : "2016-01-27 11:48:57", "instrumented" : 130, "covered" : 98,};
 var merged_data = [];
