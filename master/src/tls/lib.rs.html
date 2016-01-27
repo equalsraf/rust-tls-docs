@@ -453,17 +453,31 @@
 <span id="410">410</span>
 <span id="411">411</span>
 <span id="412">412</span>
+<span id="413">413</span>
+<span id="414">414</span>
+<span id="415">415</span>
+<span id="416">416</span>
+<span id="417">417</span>
+<span id="418">418</span>
+<span id="419">419</span>
+<span id="420">420</span>
+<span id="421">421</span>
+<span id="422">422</span>
+<span id="423">423</span>
+<span id="424">424</span>
+<span id="425">425</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! Rust bindings for [libressl](http://libressl.org)&#39;s libtls</span>
 <span class='doccomment'>//! For the authoritative source on the inner workings of libtls check</span>
 <span class='doccomment'>//! the [manpage](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/tls_accept_fds.3?query=tls_init&amp;sec=3).</span>
+<span class='doccomment'>//! The [raw](raw/index.html) module holds the bindings around libtls. A more idiomatic API is</span>
+<span class='doccomment'>//! is provided here.</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! ## Client</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! ```no_run</span>
 <span class='doccomment'>//! use std::io::Write;</span>
 <span class='doccomment'>//! use std::net::TcpStream;</span>
-<span class='doccomment'>//! tls::init();</span>
 <span class='doccomment'>//! let tcp = TcpStream::connect(&quot;google.com:443&quot;).unwrap();</span>
 <span class='doccomment'>//! let mut client = tls::new_client()</span>
 <span class='doccomment'>//!     .from_socket(&amp;tcp, &quot;google.com&quot;)</span>
@@ -478,7 +492,6 @@
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! ```no_run</span>
 <span class='doccomment'>//! use std::net::TcpListener;</span>
-<span class='doccomment'>//! tls::init();</span>
 <span class='doccomment'>//! let srv = TcpListener::bind(&quot;127.0.0.1:0&quot;).unwrap();</span>
 <span class='doccomment'>//! let addr = srv.local_addr().unwrap();</span>
 <span class='doccomment'>//! let mut tls_srv = tls::new_server()</span>
@@ -503,10 +516,9 @@
 <span class='doccomment'>//! `RawFd`/`RawSocket`. Destroying the TlsStream object WILL NOT cause the underlying</span>
 <span class='doccomment'>//! sockets to be closed, you need to close them yourself.</span>
 
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>chrono</span>;
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>libc</span>;
 
-<span class='doccomment'>/// TODO: Remove this from the public API</span>
-<span class='kw'>use</span> <span class='ident'>libc</span>::<span class='ident'>time_t</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>error</span>::<span class='ident'>Error</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='ident'>Read</span>, <span class='ident'>Write</span>};
@@ -514,12 +526,14 @@
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>unix</span>::<span class='ident'>io</span>::<span class='ident'>AsRawFd</span>;
 <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>windows</span>)]</span>
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>windows</span>::<span class='ident'>io</span>::<span class='ident'>AsRawSocket</span>;
+<span class='kw'>use</span> <span class='ident'>chrono</span>::<span class='ident'>datetime</span>::<span class='ident'>DateTime</span>;
+<span class='kw'>use</span> <span class='ident'>chrono</span>::<span class='ident'>offset</span>::<span class='ident'>utc</span>::<span class='ident'>UTC</span>;
 
 <span class='kw'>mod</span> <span class='ident'>util</span>;
-<span class='kw'>mod</span> <span class='ident'>raw</span>;
+<span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>raw</span>;
 <span class='kw'>use</span> <span class='ident'>raw</span>::{<span class='ident'>TlsConfig</span>, <span class='ident'>TlsContext</span>};
 
-<span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>raw</span>::{<span class='ident'>TlsResult</span>, <span class='ident'>TlsError</span>, <span class='ident'>init</span>};
+<span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>raw</span>::{<span class='ident'>TlsResult</span>, <span class='ident'>TlsError</span>};
 
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>ClientBuilder</span> {
     <span class='ident'>cfg</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>TlsConfig</span><span class='op'>&gt;</span>,
@@ -640,6 +654,13 @@
 
 <span class='doccomment'>/// Create a new TLS client</span>
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>new_client</span>() <span class='op'>-&gt;</span> <span class='ident'>ClientBuilder</span> {
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ident'>raw</span>::<span class='ident'>init</span>() {
+        <span class='kw'>return</span> <span class='ident'>ClientBuilder</span> {
+            <span class='ident'>cfg</span>: <span class='prelude-val'>None</span>,
+            <span class='ident'>error</span>: <span class='prelude-val'>Some</span>(<span class='ident'>TlsError</span>::<span class='ident'>new</span>(<span class='string'>&quot;Failed to initialize libtls&quot;</span>)),
+        }
+    }
+
     <span class='kw'>match</span> <span class='ident'>TlsConfig</span>::<span class='ident'>new</span>() {
         <span class='prelude-val'>Ok</span>(<span class='ident'>cfg</span>) <span class='op'>=&gt;</span> {
             <span class='ident'>ClientBuilder</span> {
@@ -700,10 +721,10 @@
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>peer_cert_provided</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> {
         <span class='self'>self</span>.<span class='ident'>ctx</span>.<span class='ident'>peer_cert_provided</span>()
     }
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>peer_cert_notbefore</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>time_t</span><span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>peer_cert_notbefore</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>DateTime</span><span class='op'>&lt;</span><span class='ident'>UTC</span><span class='op'>&gt;&gt;</span> {
         <span class='self'>self</span>.<span class='ident'>ctx</span>.<span class='ident'>peer_cert_notbefore</span>()
     }
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>peer_cert_notafter</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>time_t</span><span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>peer_cert_notafter</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>TlsResult</span><span class='op'>&lt;</span><span class='ident'>DateTime</span><span class='op'>&lt;</span><span class='ident'>UTC</span><span class='op'>&gt;&gt;</span> {
         <span class='self'>self</span>.<span class='ident'>ctx</span>.<span class='ident'>peer_cert_notafter</span>()
     }
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>peer_cert_contains_name</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>name</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> {
@@ -790,6 +811,13 @@
 
 <span class='doccomment'>/// Create a new TLS server</span>
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>new_server</span>() <span class='op'>-&gt;</span> <span class='ident'>ServerBuilder</span> {
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ident'>raw</span>::<span class='ident'>init</span>() {
+        <span class='kw'>return</span> <span class='ident'>ServerBuilder</span> {
+            <span class='ident'>cfg</span>: <span class='prelude-val'>None</span>,
+            <span class='ident'>error</span>: <span class='prelude-val'>Some</span>(<span class='ident'>TlsError</span>::<span class='ident'>new</span>(<span class='string'>&quot;Failed to initialize libtls&quot;</span>)),
+        }
+    }
+
     <span class='kw'>match</span> <span class='ident'>TlsConfig</span>::<span class='ident'>new</span>() {
         <span class='prelude-val'>Ok</span>(<span class='ident'>cfg</span>) <span class='op'>=&gt;</span> {
             <span class='ident'>ServerBuilder</span> {
@@ -851,8 +879,6 @@
 
 <span class='attribute'>#[<span class='ident'>test</span>]</span>
 <span class='kw'>fn</span> <span class='ident'>client_ctx_defs</span>() {
-    <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>init</span>());
-
     <span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>TlsContext</span>::<span class='ident'>new_client</span>().<span class='ident'>unwrap</span>();
 
     <span class='comment'>// These are the defaults before the connection is set</span>
