@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `telos` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, telos">
+
+    <title>telos - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'telos', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>telos</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-0' class='srclink' href='../src/telos/lib.rs.html#1-425' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Rust bindings for <a href="http://libressl.org">libressl</a>&#39;s libtls
+For the authoritative source on the inner workings of libtls check
+the <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/tls_accept_fds.3?query=tls_init&amp;sec=3">manpage</a>.
+The <a href="raw/index.html">raw</a> module holds the bindings around libtls. A more idiomatic API
+is provided here.</p>
+
+<h2 id='client' class='section-header'><a href='#client'>Client</a></h2><pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::<span class='ident'>Write</span>;
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>TcpStream</span>;
+<span class='kw'>let</span> <span class='ident'>tcp</span> <span class='op'>=</span> <span class='ident'>TcpStream</span>::<span class='ident'>connect</span>(<span class='string'>&quot;google.com:443&quot;</span>).<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>client</span> <span class='op'>=</span> <span class='ident'>telos</span>::<span class='ident'>new_client</span>()
+    .<span class='ident'>from_socket</span>(<span class='kw-2'>&amp;</span><span class='ident'>tcp</span>, <span class='string'>&quot;google.com&quot;</span>)
+    .<span class='ident'>unwrap</span>();
+<span class='ident'>client</span>.<span class='ident'>write</span>(<span class='string'>&quot;GET / HTTP/1.1\n\n&quot;</span>.<span class='ident'>as_bytes</span>()).<span class='ident'>unwrap</span>();</pre>
+
+<h2 id='server' class='section-header'><a href='#server'>Server</a></h2>
+<p>The library does not handle TCP listening and binding, you need to handle the
+TCP server accept() and then call <code>TlsServer::accept</code></p>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>TcpListener</span>;
+<span class='kw'>let</span> <span class='ident'>srv</span> <span class='op'>=</span> <span class='ident'>TcpListener</span>::<span class='ident'>bind</span>(<span class='string'>&quot;127.0.0.1:0&quot;</span>).<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='ident'>addr</span> <span class='op'>=</span> <span class='ident'>srv</span>.<span class='ident'>local_addr</span>().<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>tls_srv</span> <span class='op'>=</span> <span class='ident'>telos</span>::<span class='ident'>new_server</span>()
+    .<span class='ident'>key_file</span>(<span class='string'>&quot;tests/private_key.key&quot;</span>)
+    .<span class='ident'>cert_file</span>(<span class='string'>&quot;tests/certificate.crt&quot;</span>)
+    .<span class='ident'>bind</span>().<span class='ident'>unwrap</span>();
+<span class='comment'>// Accept TCP connection, and then start TLS over it</span>
+<span class='kw'>let</span> <span class='ident'>tcp_conn</span> <span class='op'>=</span> <span class='ident'>srv</span>.<span class='ident'>incoming</span>().<span class='ident'>next</span>().<span class='ident'>unwrap</span>().<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>tls_conn</span> <span class='op'>=</span> <span class='ident'>tls_srv</span>.<span class='ident'>accept</span>(<span class='kw-2'>&amp;</span><span class='ident'>tcp_conn</span>).<span class='ident'>unwrap</span>();</pre>
+
+<h2 id='certificate-verification' class='section-header'><a href='#certificate-verification'>Certificate Verification</a></h2>
+<p>By default libtls will verify certificates using the system certificate store (usually defined
+as /etc/ssl/cert.pem). In some Linux flavours and in Windows this file does not exist and you
+will need to use one of the appropriate methods to load the correct certificates for your
+system - check the Builder classes for the ca methods.</p>
+
+<h2 id='connection-lifetime' class='section-header'><a href='#connection-lifetime'>Connection Lifetime</a></h2>
+<p>The <code>from_socket()</code> and <code>accept()</code> methods build new connections on top of
+<code>RawFd</code>/<code>RawSocket</code>. Destroying the TlsStream object WILL NOT cause the underlying
+sockets to be closed, you need to close them yourself.</p>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use raw::{<a class='type' href='../telos/raw/type.TlsResult.html' title='telos::raw::TlsResult'>TlsResult</a>, <a class='struct' href='../telos/raw/struct.TlsError.html' title='telos::raw::TlsError'>TlsError</a>};</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='raw/index.html'
+                               title='telos::raw'>raw</a></td>
+                        <td class='docblock short'>
+                             <p>Minimal bindings around libtls. These are not very ergonomic, and may
+allow you to issue calls that can never succeed (e.g. read/write a server
+context).</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.ClientBuilder.html'
+                               title='telos::ClientBuilder'>ClientBuilder</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.ServerBuilder.html'
+                               title='telos::ServerBuilder'>ServerBuilder</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.TlsServer.html'
+                               title='telos::TlsServer'>TlsServer</a></td>
+                        <td class='docblock short'>
+                             <p>TLS Server, used to start TLS session over existing sockets.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.TlsStream.html'
+                               title='telos::TlsStream'>TlsStream</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.new_client.html'
+                               title='telos::new_client'>new_client</a></td>
+                        <td class='docblock short'>
+                             <p>Create a new TLS client</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.new_server.html'
+                               title='telos::new_server'>new_server</a></td>
+                        <td class='docblock short'>
+                             <p>Create a new TLS server</p>
+
+                        </td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "telos";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
