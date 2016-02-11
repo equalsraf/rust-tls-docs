@@ -346,8 +346,8 @@ var data = {lines:[
 {"lineNum":"  345","line":"    ///"},
 {"lineNum":"  346","line":"    /// This function will be called when needed by `read()` or `write()`, but"},
 {"lineNum":"  347","line":"    /// can be called to complete the handshake."},
-{"lineNum":"  348","line":"    pub fn handshake(&mut self) -> TlsResult<()> {","class":"lineCov","hits":"1","order":"741","possible_hits":"1",},
-{"lineNum":"  349","line":"        let rv = unsafe { ffi::tls_handshake(self.ptr) };","class":"lineCov","hits":"1","order":"742","possible_hits":"1",},
+{"lineNum":"  348","line":"    pub fn handshake(&mut self) -> TlsResult<()> {","class":"lineCov","hits":"1","order":"740","possible_hits":"1",},
+{"lineNum":"  349","line":"        let rv = unsafe { ffi::tls_handshake(self.ptr) };","class":"lineCov","hits":"1","order":"741","possible_hits":"1",},
 {"lineNum":"  350","line":"        self.rv_to_result_io(rv as i64).map(|_| ())","class":"linePartCov","hits":"3","order":"903","possible_hits":"4",},
 {"lineNum":"  351","line":"    }","class":"linePartCov","hits":"1","order":"904","possible_hits":"2",},
 {"lineNum":"  352","line":""},
@@ -360,8 +360,8 @@ var data = {lines:[
 {"lineNum":"  359","line":"        let buflen = buf.len() as size_t;","class":"lineCov","hits":"1","order":"720","possible_hits":"1",},
 {"lineNum":"  360","line":"        let bptr = buf.as_mut_ptr() as *mut c_void;","class":"lineCov","hits":"1","order":"721","possible_hits":"1",},
 {"lineNum":"  361","line":"        let rv = unsafe { ffi::tls_read(self.ptr, bptr, buflen) };","class":"lineCov","hits":"1","order":"726","possible_hits":"1",},
-{"lineNum":"  362","line":"        self.rv_to_result_io(rv as i64)","class":"lineCov","hits":"1","order":"857","possible_hits":"1",},
-{"lineNum":"  363","line":"    }","class":"linePartCov","hits":"1","order":"858","possible_hits":"2",},
+{"lineNum":"  362","line":"        self.rv_to_result_io(rv as i64)","class":"lineCov","hits":"1","order":"861","possible_hits":"1",},
+{"lineNum":"  363","line":"    }","class":"linePartCov","hits":"1","order":"862","possible_hits":"2",},
 {"lineNum":"  364","line":""},
 {"lineNum":"  365","line":"    pub fn write(&mut self, buf: &[u8]) -> TlsResult<usize> {","class":"lineCov","hits":"1","order":"599","possible_hits":"1",},
 {"lineNum":"  366","line":"        let buflen = buf.len() as size_t;","class":"lineCov","hits":"1","order":"600","possible_hits":"1",},
@@ -469,5 +469,5 @@ var data = {lines:[
 {"lineNum":"  468","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:04:04", "instrumented" : 130, "covered" : 98,};
+var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:35:35", "instrumented" : 130, "covered" : 98,};
 var merged_data = [];

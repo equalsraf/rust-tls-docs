@@ -175,7 +175,7 @@ var data = {lines:[
 {"lineNum":"  174","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"592",},
 {"lineNum":"  175","line":"\t}"},
 {"lineNum":"  176","line":""},
-{"lineNum":"  177","line":"\tctx->state |= TLS_HANDSHAKE_COMPLETE;","class":"lineCov","hits":"1","order":"385",},
+{"lineNum":"  177","line":"\tctx->state |= TLS_HANDSHAKE_COMPLETE;","class":"lineCov","hits":"1","order":"389",},
 {"lineNum":"  178","line":"\trv = 0;","class":"lineCov","hits":"1","order":"391",},
 {"lineNum":"  179","line":""},
 {"lineNum":"  180","line":" err:"},
@@ -183,5 +183,5 @@ var data = {lines:[
 {"lineNum":"  182","line":"}","class":"lineCov","hits":"1","order":"393",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:04:03", "instrumented" : 89, "covered" : 50,};
+var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:35:35", "instrumented" : 89, "covered" : 50,};
 var merged_data = [];

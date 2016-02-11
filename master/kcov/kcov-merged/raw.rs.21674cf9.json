@@ -346,8 +346,8 @@ var data = {lines:[
 {"lineNum":"  345","line":"    ///"},
 {"lineNum":"  346","line":"    /// This function will be called when needed by `read()` or `write()`, but"},
 {"lineNum":"  347","line":"    /// can be called to complete the handshake."},
-{"lineNum":"  348","line":"    pub fn handshake(&mut self) -> TlsResult<()> {","class":"lineCov","hits":"1","order":"388",},
-{"lineNum":"  349","line":"        let rv = unsafe { ffi::tls_handshake(self.ptr) };","class":"lineCov","hits":"1","order":"389",},
+{"lineNum":"  348","line":"    pub fn handshake(&mut self) -> TlsResult<()> {","class":"lineCov","hits":"1","order":"387",},
+{"lineNum":"  349","line":"        let rv = unsafe { ffi::tls_handshake(self.ptr) };","class":"lineCov","hits":"1","order":"388",},
 {"lineNum":"  350","line":"        self.rv_to_result_io(rv as i64).map(|_| ())","class":"lineCov","hits":"1","order":"504",},
 {"lineNum":"  351","line":"    }","class":"lineCov","hits":"1","order":"505",},
 {"lineNum":"  352","line":""},
@@ -469,5 +469,5 @@ var data = {lines:[
 {"lineNum":"  468","line":"}","class":"lineCov","hits":"1","order":"794",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:04:03", "instrumented" : 242, "covered" : 219,};
+var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:35:35", "instrumented" : 242, "covered" : 219,};
 var merged_data = [];
