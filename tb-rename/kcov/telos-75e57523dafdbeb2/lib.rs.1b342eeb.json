@@ -417,14 +417,14 @@ var data = {lines:[
 {"lineNum":"  416","line":"    assert_eq!(c.conn_version(), \"\");"},
 {"lineNum":"  417","line":"    assert_eq!(c.conn_cipher(), \"\");"},
 {"lineNum":"  418","line":"    assert!(c.peer_cert_notbefore().is_err());","class":"linePartCov","hits":"1","order":"180","possible_hits":"2",},
-{"lineNum":"  419","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"443","possible_hits":"2",},
+{"lineNum":"  419","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"432","possible_hits":"2",},
 {"lineNum":"  420","line":"    assert_eq!(c.peer_cert_issuer(), \"\");"},
 {"lineNum":"  421","line":"    assert_eq!(c.peer_cert_subject(), \"\");"},
 {"lineNum":"  422","line":"    assert_eq!(c.peer_cert_hash(), \"\");"},
 {"lineNum":"  423","line":"    assert_eq!(c.peer_cert_contains_name(\"some.name\"), false);"},
 {"lineNum":"  424","line":"    assert_eq!(c.peer_cert_provided(), false);"},
-{"lineNum":"  425","line":"}","class":"linePartCov","hits":"1","order":"686","possible_hits":"2",},
+{"lineNum":"  425","line":"}","class":"linePartCov","hits":"1","order":"639","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-75e57523dafdbeb2", "date" : "2016-02-11 00:03:18", "instrumented" : 18, "covered" : 18,};
+var header = { "command" : "telos-75e57523dafdbeb2", "date" : "2016-02-11 00:11:19", "instrumented" : 18, "covered" : 18,};
 var merged_data = [];

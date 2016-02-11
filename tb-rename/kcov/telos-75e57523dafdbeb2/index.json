@@ -18,5 +18,5 @@ var data = {files:[
 {"link":"datetime.rs.8e18c37e.html","title":"datetime.rs","summary_name":"/home/travis/.cargo/registry/src/github.com-88ac128001ac3a9a/chrono-0.2.19/src/datetime.rs","covered_class":"lineNoCov","covered":"0.0","covered_lines":"0","uncovered_lines":"1","total_lines" : "1"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-75e57523dafdbeb2", "date" : "2016-02-11 00:03:18", "instrumented" : 1304, "covered" : 669,};
+var header = { "command" : "telos-75e57523dafdbeb2", "date" : "2016-02-11 00:11:19", "instrumented" : 1304, "covered" : 669,};
 var merged_data = [];

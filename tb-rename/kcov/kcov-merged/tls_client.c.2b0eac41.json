@@ -261,7 +261,7 @@ var data = {lines:[
 {"lineNum":"  260","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"973",},
 {"lineNum":"  261","line":"\t}"},
 {"lineNum":"  262","line":""},
-{"lineNum":"  263","line":"\tif (ctx->config->verify_name) {","class":"lineCov","hits":"1","order":"425",},
+{"lineNum":"  263","line":"\tif (ctx->config->verify_name) {","class":"lineCov","hits":"1","order":"390",},
 {"lineNum":"  264","line":"\t\tcert = SSL_get_peer_certificate(ctx->ssl_conn);","class":"lineCov","hits":"1","order":"681",},
 {"lineNum":"  265","line":"\t\tif (cert == NULL) {","class":"lineCov","hits":"1","order":"682",},
 {"lineNum":"  266","line":"\t\t\ttls_set_errorx(ctx, \"no server certificate\");","class":"lineNoCov","hits":"0",},
@@ -286,5 +286,5 @@ var data = {lines:[
 {"lineNum":"  285","line":"}","class":"lineCov","hits":"1","order":"430",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:03:26", "instrumented" : 141, "covered" : 98,};
+var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:11:28", "instrumented" : 141, "covered" : 98,};
 var merged_data = [];

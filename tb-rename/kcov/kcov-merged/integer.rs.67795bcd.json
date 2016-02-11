@@ -631,5 +631,5 @@ var data = {lines:[
 {"lineNum":"  630","line":"impl_integer_for_usize!(usize, test_integer_usize);"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:03:26", "instrumented" : 11, "covered" : 11,};
+var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:11:28", "instrumented" : 11, "covered" : 11,};
 var merged_data = [];

@@ -18,5 +18,5 @@ var data = {files:[
 {"link":"datetime.rs.f471b9ed.html","title":"datetime.rs","summary_name":"/home/travis/.cargo/registry/src/github.com-88ac128001ac3a9a/chrono-0.2.19/src/naive/datetime.rs","covered_class":"lineCov","covered":"91.7","covered_lines":"11","uncovered_lines":"1","total_lines" : "12"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:03:26", "instrumented" : 1548, "covered" : 1129,};
+var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:11:28", "instrumented" : 1548, "covered" : 1129,};
 var merged_data = [];

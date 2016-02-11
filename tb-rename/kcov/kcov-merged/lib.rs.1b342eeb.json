@@ -221,7 +221,7 @@ var data = {lines:[
 {"lineNum":"  220","line":"    /// will usually result in an error."},
 {"lineNum":"  221","line":"    pub fn handshake(&mut self) -> TlsResult<()> {","class":"lineCov","hits":"1","order":"385",},
 {"lineNum":"  222","line":"        self.ctx.handshake()","class":"lineCov","hits":"1","order":"386",},
-{"lineNum":"  223","line":"    }","class":"lineCov","hits":"1","order":"581",},
+{"lineNum":"  223","line":"    }","class":"lineCov","hits":"1","order":"506",},
 {"lineNum":"  224","line":""},
 {"lineNum":"  225","line":"    /// Close TLS connection. This will not close the underlying transport."},
 {"lineNum":"  226","line":"    pub fn shutdown(&mut self) -> io::Result<()> {","class":"lineCov","hits":"1","order":"1007",},
@@ -287,16 +287,16 @@ var data = {lines:[
 {"lineNum":"  286","line":"        self.ctx","class":"lineCov","hits":"1","order":"257",},
 {"lineNum":"  287","line":"            .write(buf)","class":"lineCov","hits":"1","order":"258",},
 {"lineNum":"  288","line":"            .map_err(|err| io::Error::from(err))","class":"lineNoCov","hits":"0",},
-{"lineNum":"  289","line":"    }","class":"lineCov","hits":"1","order":"424",},
+{"lineNum":"  289","line":"    }","class":"lineCov","hits":"1","order":"425",},
 {"lineNum":"  290","line":"    fn flush(&mut self) -> io::Result<()> {"},
 {"lineNum":"  291","line":"        Ok(())"},
 {"lineNum":"  292","line":"    }"},
 {"lineNum":"  293","line":"}"},
 {"lineNum":"  294","line":""},
 {"lineNum":"  295","line":"impl Drop for TlsStream {"},
-{"lineNum":"  296","line":"    fn drop(&mut self) {","class":"lineCov","hits":"1","order":"505",},
-{"lineNum":"  297","line":"        let _ = self.ctx.close();","class":"lineCov","hits":"1","order":"506",},
-{"lineNum":"  298","line":"    }","class":"lineCov","hits":"1","order":"523",},
+{"lineNum":"  296","line":"    fn drop(&mut self) {","class":"lineCov","hits":"1","order":"507",},
+{"lineNum":"  297","line":"        let _ = self.ctx.close();","class":"lineCov","hits":"1","order":"508",},
+{"lineNum":"  298","line":"    }","class":"lineCov","hits":"1","order":"525",},
 {"lineNum":"  299","line":"}"},
 {"lineNum":"  300","line":""},
 {"lineNum":"  301","line":"pub struct ServerBuilder {"},
@@ -426,5 +426,5 @@ var data = {lines:[
 {"lineNum":"  425","line":"}","class":"lineCov","hits":"1","order":"772",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:03:26", "instrumented" : 156, "covered" : 140,};
+var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:11:28", "instrumented" : 156, "covered" : 140,};
 var merged_data = [];

@@ -44,5 +44,5 @@ var data = {lines:[
 {"lineNum":"   43","line":"}","class":"linePartCov","hits":"1","order":"684","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:03:27", "instrumented" : 13, "covered" : 10,};
+var header = { "command" : "test_server-ddc3d5af922e0234", "date" : "2016-02-11 00:11:28", "instrumented" : 13, "covered" : 10,};
 var merged_data = [];

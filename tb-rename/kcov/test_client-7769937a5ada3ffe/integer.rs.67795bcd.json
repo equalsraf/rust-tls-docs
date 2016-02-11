@@ -167,7 +167,7 @@ var data = {lines:[
 {"lineNum":"  166","line":"/// Floored integer modulus"},
 {"lineNum":"  167","line":"#[inline] pub fn mod_floor<T: Integer>(x: T, y: T) -> T { x.mod_floor(&y) }"},
 {"lineNum":"  168","line":"/// Simultaneous floored integer division and modulus"},
-{"lineNum":"  169","line":"#[inline] pub fn div_mod_floor<T: Integer>(x: T, y: T) -> (T, T) { x.div_mod_floor(&y) }","class":"lineCov","hits":"4","order":"1054","possible_hits":"4",},
+{"lineNum":"  169","line":"#[inline] pub fn div_mod_floor<T: Integer>(x: T, y: T) -> (T, T) { x.div_mod_floor(&y) }","class":"lineCov","hits":"4","order":"1053","possible_hits":"4",},
 {"lineNum":"  170","line":""},
 {"lineNum":"  171","line":"/// Calculates the Greatest Common Divisor (GCD) of the number and `other`. The"},
 {"lineNum":"  172","line":"/// result is always positive."},
@@ -204,13 +204,13 @@ var data = {lines:[
 {"lineNum":"  203","line":""},
 {"lineNum":"  204","line":"            /// Calculates `div_floor` and `mod_floor` simultaneously"},
 {"lineNum":"  205","line":"            #[inline]"},
-{"lineNum":"  206","line":"            fn div_mod_floor(&self, other: &$T) -> ($T,$T) {","class":"linePartCov","hits":"4","order":"1058","possible_hits":"5",},
+{"lineNum":"  206","line":"            fn div_mod_floor(&self, other: &$T) -> ($T,$T) {","class":"linePartCov","hits":"4","order":"1056","possible_hits":"5",},
 {"lineNum":"  207","line":"                // Algorithm from [Daan Leijen. _Division and Modulus for Computer Scientists_,"},
 {"lineNum":"  208","line":"                // December 2001](http://research.microsoft.com/pubs/151917/divmodnote-letter.pdf)"},
-{"lineNum":"  209","line":"                match self.div_rem(other) {","class":"lineCov","hits":"4","order":"1060","possible_hits":"4",},
-{"lineNum":"  210","line":"                    (d, r) if (r > 0 && *other < 0)","class":"lineCov","hits":"4","order":"1070","possible_hits":"4",},
-{"lineNum":"  211","line":"                           || (r < 0 && *other > 0) => (d - 1, r + *other),","class":"linePartCov","hits":"2","order":"1075","possible_hits":"4",},
-{"lineNum":"  212","line":"                    (d, r)                          => (d, r),","class":"lineCov","hits":"2","order":"1077","possible_hits":"2",},
+{"lineNum":"  209","line":"                match self.div_rem(other) {","class":"lineCov","hits":"4","order":"1057","possible_hits":"4",},
+{"lineNum":"  210","line":"                    (d, r) if (r > 0 && *other < 0)","class":"lineCov","hits":"4","order":"1068","possible_hits":"4",},
+{"lineNum":"  211","line":"                           || (r < 0 && *other > 0) => (d - 1, r + *other),","class":"linePartCov","hits":"2","order":"1073","possible_hits":"4",},
+{"lineNum":"  212","line":"                    (d, r)                          => (d, r),","class":"lineCov","hits":"2","order":"1076","possible_hits":"2",},
 {"lineNum":"  213","line":"                }"},
 {"lineNum":"  214","line":"            }"},
 {"lineNum":"  215","line":""},
@@ -281,8 +281,8 @@ var data = {lines:[
 {"lineNum":"  280","line":""},
 {"lineNum":"  281","line":"            /// Simultaneous truncated integer division and modulus."},
 {"lineNum":"  282","line":"            #[inline]"},
-{"lineNum":"  283","line":"            fn div_rem(&self, other: &$T) -> ($T, $T) {","class":"lineCov","hits":"4","order":"1063","possible_hits":"4",},
-{"lineNum":"  284","line":"                (*self / *other, *self % *other)","class":"linePartCov","hits":"2","order":"1066","possible_hits":"6",},
+{"lineNum":"  283","line":"            fn div_rem(&self, other: &$T) -> ($T, $T) {","class":"lineCov","hits":"4","order":"1060","possible_hits":"4",},
+{"lineNum":"  284","line":"                (*self / *other, *self % *other)","class":"linePartCov","hits":"2","order":"1063","possible_hits":"6",},
 {"lineNum":"  285","line":"            }"},
 {"lineNum":"  286","line":"        }"},
 {"lineNum":"  287","line":""},
@@ -631,5 +631,5 @@ var data = {lines:[
 {"lineNum":"  630","line":"impl_integer_for_usize!(usize, test_integer_usize);"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-7769937a5ada3ffe", "date" : "2016-02-11 00:03:21", "instrumented" : 11, "covered" : 11,};
+var header = { "command" : "test_client-7769937a5ada3ffe", "date" : "2016-02-11 00:11:22", "instrumented" : 11, "covered" : 11,};
 var merged_data = [];
