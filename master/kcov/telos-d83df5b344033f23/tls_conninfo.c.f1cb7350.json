@@ -215,5 +215,5 @@ var data = {lines:[
 {"lineNum":"  214","line":"}","class":"linePartCov","hits":"1","order":"95","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-d83df5b344033f23", "date" : "2016-02-11 00:50:41", "instrumented" : 129, "covered" : 93,};
+var header = { "command" : "telos-d83df5b344033f23", "date" : "2016-02-11 01:03:55", "instrumented" : 129, "covered" : 93,};
 var merged_data = [];
