@@ -469,5 +469,5 @@ var data = {lines:[
 {"lineNum":"  468","line":"}","class":"linePartCov","hits":"1","order":"560","possible_hits":"3",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-d83df5b344033f23", "date" : "2016-02-11 00:48:53", "instrumented" : 146, "covered" : 129,};
+var header = { "command" : "telos-d83df5b344033f23", "date" : "2016-02-11 01:02:53", "instrumented" : 146, "covered" : 129,};
 var merged_data = [];

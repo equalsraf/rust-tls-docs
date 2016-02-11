@@ -2,7 +2,7 @@ var data = {lines:[
 {"lineNum":"    1","line":"//! Rust bindings for [libressl](http://libressl.org)\'s libtls"},
 {"lineNum":"    2","line":"//! For the authoritative source on the inner workings of libtls check","class":"lineNoCov","hits":"0","possible_hits":"9",},
 {"lineNum":"    3","line":"//! the [manpage](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/tls_accept_fds.3?query=tls_init&sec=3)."},
-{"lineNum":"    4","line":"//! The [raw](raw/index.html) module holds the bindings around libtls. A more idiomatic API is"},
+{"lineNum":"    4","line":"//! The [raw](raw/index.html) module holds the bindings around libtls. A more idiomatic API"},
 {"lineNum":"    5","line":"//! is provided here."},
 {"lineNum":"    6","line":"//!"},
 {"lineNum":"    7","line":"//! ## Client"},
@@ -279,7 +279,7 @@ var data = {lines:[
 {"lineNum":"  278","line":"        self.ctx","class":"lineCov","hits":"2","order":"717","possible_hits":"2",},
 {"lineNum":"  279","line":"            .read(buf)","class":"lineCov","hits":"1","order":"718","possible_hits":"1",},
 {"lineNum":"  280","line":"            .map_err(|err| io::Error::from(err))","class":"lineNoCov","hits":"0","possible_hits":"2",},
-{"lineNum":"  281","line":"    }","class":"linePartCov","hits":"1","order":"863","possible_hits":"2",},
+{"lineNum":"  281","line":"    }","class":"linePartCov","hits":"1","order":"858","possible_hits":"2",},
 {"lineNum":"  282","line":"}"},
 {"lineNum":"  283","line":""},
 {"lineNum":"  284","line":"impl Write for TlsStream {"},
@@ -426,5 +426,5 @@ var data = {lines:[
 {"lineNum":"  425","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 00:49:01", "instrumented" : 86, "covered" : 75,};
+var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:03:02", "instrumented" : 86, "covered" : 75,};
 var merged_data = [];

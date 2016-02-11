@@ -469,5 +469,5 @@ var data = {lines:[
 {"lineNum":"  468","line":"}","class":"lineCov","hits":"1","order":"794",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 00:49:01", "instrumented" : 242, "covered" : 219,};
+var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-11 01:03:01", "instrumented" : 242, "covered" : 219,};
 var merged_data = [];

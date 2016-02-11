@@ -36,14 +36,14 @@ var data = {lines:[
 {"lineNum":"   35","line":""},
 {"lineNum":"   36","line":"static void *"},
 {"lineNum":"   37","line":"memdup(const void *in, size_t len)"},
-{"lineNum":"   38","line":"{","class":"lineCov","hits":"1","order":"654","possible_hits":"1",},
+{"lineNum":"   38","line":"{","class":"lineCov","hits":"1","order":"656","possible_hits":"1",},
 {"lineNum":"   39","line":"\tvoid *out;"},
 {"lineNum":"   40","line":""},
-{"lineNum":"   41","line":"\tif ((out = malloc(len)) == NULL)","class":"lineCov","hits":"1","order":"655","possible_hits":"1",},
+{"lineNum":"   41","line":"\tif ((out = malloc(len)) == NULL)","class":"lineCov","hits":"1","order":"758","possible_hits":"1",},
 {"lineNum":"   42","line":"\t\treturn NULL;","class":"lineNoCov","hits":"0","possible_hits":"1",},
-{"lineNum":"   43","line":"\tmemcpy(out, in, len);","class":"lineCov","hits":"1","order":"656","possible_hits":"1",},
-{"lineNum":"   44","line":"\treturn out;","class":"lineCov","hits":"1","order":"657","possible_hits":"1",},
-{"lineNum":"   45","line":"}","class":"lineCov","hits":"1","order":"658","possible_hits":"1",},
+{"lineNum":"   43","line":"\tmemcpy(out, in, len);","class":"lineCov","hits":"1","order":"759","possible_hits":"1",},
+{"lineNum":"   44","line":"\treturn out;","class":"lineCov","hits":"1","order":"760","possible_hits":"1",},
+{"lineNum":"   45","line":"}","class":"lineCov","hits":"1","order":"761","possible_hits":"1",},
 {"lineNum":"   46","line":""},
 {"lineNum":"   47","line":"static int"},
 {"lineNum":"   48","line":"set_mem(char **dest, size_t *destlen, const void *src, size_t srclen)"},
@@ -52,7 +52,7 @@ var data = {lines:[
 {"lineNum":"   51","line":"\t*dest = NULL;","class":"lineCov","hits":"1","order":"608","possible_hits":"1",},
 {"lineNum":"   52","line":"\t*destlen = 0;","class":"lineCov","hits":"1","order":"609","possible_hits":"1",},
 {"lineNum":"   53","line":"\tif (src != NULL)","class":"lineCov","hits":"1","order":"610","possible_hits":"1",},
-{"lineNum":"   54","line":"\t\tif ((*dest = memdup(src, srclen)) == NULL)","class":"lineCov","hits":"1","order":"653","possible_hits":"1",},
+{"lineNum":"   54","line":"\t\tif ((*dest = memdup(src, srclen)) == NULL)","class":"lineCov","hits":"1","order":"655","possible_hits":"1",},
 {"lineNum":"   55","line":"\t\t\treturn -1;","class":"lineNoCov","hits":"0","possible_hits":"1",},
 {"lineNum":"   56","line":"\t*destlen = srclen;","class":"lineCov","hits":"1","order":"611","possible_hits":"1",},
 {"lineNum":"   57","line":"\treturn 0;","class":"lineCov","hits":"1","order":"612","possible_hits":"1",},
@@ -185,9 +185,9 @@ var data = {lines:[
 {"lineNum":"  184","line":""},
 {"lineNum":"  185","line":"int"},
 {"lineNum":"  186","line":"tls_config_set_ca_path(struct tls_config *config, const char *ca_path)"},
-{"lineNum":"  187","line":"{","class":"lineCov","hits":"1","order":"680","possible_hits":"1",},
-{"lineNum":"  188","line":"\treturn set_string(&config->ca_path, ca_path);","class":"lineCov","hits":"1","order":"681","possible_hits":"1",},
-{"lineNum":"  189","line":"}","class":"lineCov","hits":"1","order":"683","possible_hits":"1",},
+{"lineNum":"  187","line":"{","class":"lineCov","hits":"1","order":"782","possible_hits":"1",},
+{"lineNum":"  188","line":"\treturn set_string(&config->ca_path, ca_path);","class":"lineCov","hits":"1","order":"783","possible_hits":"1",},
+{"lineNum":"  189","line":"}","class":"lineCov","hits":"1","order":"784","possible_hits":"1",},
 {"lineNum":"  190","line":""},
 {"lineNum":"  191","line":"int"},
 {"lineNum":"  192","line":"tls_config_set_ca_mem(struct tls_config *config, const uint8_t *ca, size_t len)"},
@@ -336,5 +336,5 @@ var data = {lines:[
 {"lineNum":"  335","line":"}","class":"lineNoCov","hits":"0","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-4682762fd156921f", "date" : "2016-02-11 00:48:55", "instrumented" : 186, "covered" : 108,};
+var header = { "command" : "test_client-4682762fd156921f", "date" : "2016-02-11 01:02:55", "instrumented" : 186, "covered" : 108,};
 var merged_data = [];
