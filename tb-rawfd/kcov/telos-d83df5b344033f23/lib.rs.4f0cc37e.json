@@ -459,7 +459,7 @@ var data = {lines:[
 {"lineNum":"  458","line":""},
 {"lineNum":"  459","line":"    #[cfg(windows)]"},
 {"lineNum":"  460","line":"    /// Start a new TLS connection over an existing socket (server-side)"},
-{"lineNum":"  461","line":"    pub fn accept_socket(&mut self, sock: RawSocket) -> TlsResult<TlsStream<F>> {"},
+{"lineNum":"  461","line":"    pub fn accept_socket(&mut self, sock: RawSocket) -> TlsResult<TlsStream<()>> {"},
 {"lineNum":"  462","line":"        let c = try!(self.ctx.accept_socket(sock));"},
 {"lineNum":"  463","line":"        Ok(TlsStream {"},
 {"lineNum":"  464","line":"            ctx: c,"},
@@ -503,15 +503,15 @@ var data = {lines:[
 {"lineNum":"  502","line":"    // These are the defaults before the connection is set"},
 {"lineNum":"  503","line":"    assert_eq!(c.conn_version(), \"\");"},
 {"lineNum":"  504","line":"    assert_eq!(c.conn_cipher(), \"\");"},
-{"lineNum":"  505","line":"    assert!(c.peer_cert_notbefore().is_err());","class":"linePartCov","hits":"1","order":"181","possible_hits":"2",},
+{"lineNum":"  505","line":"    assert!(c.peer_cert_notbefore().is_err());","class":"linePartCov","hits":"1","order":"180","possible_hits":"2",},
 {"lineNum":"  506","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"663","possible_hits":"2",},
 {"lineNum":"  507","line":"    assert_eq!(c.peer_cert_issuer(), \"\");"},
 {"lineNum":"  508","line":"    assert_eq!(c.peer_cert_subject(), \"\");"},
 {"lineNum":"  509","line":"    assert_eq!(c.peer_cert_hash(), \"\");"},
 {"lineNum":"  510","line":"    assert_eq!(c.peer_cert_contains_name(\"some.name\"), false);"},
 {"lineNum":"  511","line":"    assert_eq!(c.peer_cert_provided(), false);"},
-{"lineNum":"  512","line":"}","class":"linePartCov","hits":"1","order":"771","possible_hits":"2",},
+{"lineNum":"  512","line":"}","class":"linePartCov","hits":"1","order":"716","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-d83df5b344033f23", "date" : "2016-02-13 19:39:03", "instrumented" : 18, "covered" : 18,};
+var header = { "command" : "telos-d83df5b344033f23", "date" : "2016-02-13 22:08:34", "instrumented" : 18, "covered" : 18,};
 var merged_data = [];
