@@ -1,0 +1,8 @@
+var data = {files:[
+{"link":"telos-d83df5b344033f23/index.html","title":"telos-d83df5b344033f23","summary_name":"telos-d83df5b344033f23","covered_class":"linePartCov","covered":"51.3","covered_lines":"669","uncovered_lines":"635","total_lines" : "1304"},
+{"link":"test_client-4682762fd156921f/index.html","title":"test_client-4682762fd156921f","summary_name":"test_client-4682762fd156921f","covered_class":"linePartCov","covered":"56.2","covered_lines":"793","uncovered_lines":"618","total_lines" : "1411"},
+{"link":"test_server-233d18b05fb5cd7c/index.html","title":"test_server-233d18b05fb5cd7c","summary_name":"test_server-233d18b05fb5cd7c","covered_class":"linePartCov","covered":"49.9","covered_lines":"627","uncovered_lines":"629","total_lines" : "1256"},
+], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"73.0","covered_lines":"1130","uncovered_lines":"419","total_lines" : "1549"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "test_server-233d18b05fb5cd7c", "date" : "2016-02-13 19:18:35", "instrumented" : 3971, "covered" : 2089,};
