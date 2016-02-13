@@ -507,8 +507,6 @@
 <span id="464">464</span>
 <span id="465">465</span>
 <span id="466">466</span>
-<span id="467">467</span>
-<span id="468">468</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! Minimal bindings around libtls. These are not very ergonomic, and may</span>
 <span class='doccomment'>//! allow you to issue calls that can never succeed (e.g. read/write a server</span>
@@ -914,9 +912,7 @@
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cctx</span>: <span class='ident'>ffi</span>::<span class='ident'>Tls</span> <span class='op'>=</span> <span class='ident'>ptr</span>::<span class='ident'>null_mut</span>();;
         <span class='comment'>// This cast is not exactly safe</span>
         <span class='comment'>// http://stackoverflow.com/questions/1953639/</span>
-        <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
-            <span class='ident'>ffi</span>::<span class='ident'>tls_accept_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>cctx</span>, <span class='ident'>sock</span> <span class='kw'>as</span> <span class='ident'>i32</span>)
-        };
+        <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>ffi</span>::<span class='ident'>tls_accept_socket</span>(<span class='self'>self</span>.<span class='ident'>ptr</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>cctx</span>, <span class='ident'>sock</span> <span class='kw'>as</span> <span class='ident'>i32</span>) };
         <span class='self'>self</span>.<span class='ident'>rv_to_result</span>(<span class='ident'>rv</span> <span class='kw'>as</span> <span class='ident'>i64</span>)
             .<span class='ident'>map</span>(<span class='op'>|</span>_<span class='op'>|</span> {
                 <span class='ident'>TlsContext</span> {
@@ -966,7 +962,7 @@
     <span class='ident'>cfg</span>.<span class='ident'>set_ca_file</span>(<span class='string'>&quot;tests/cert.pem&quot;</span>).<span class='ident'>unwrap</span>();
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cli</span> <span class='op'>=</span> <span class='ident'>TlsContext</span>::<span class='ident'>new_client</span>().<span class='ident'>unwrap</span>();
     <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>cli</span>.<span class='ident'>connect_servername</span>(<span class='string'>&quot;&quot;</span>, <span class='string'>&quot;443&quot;</span>, <span class='string'>&quot;&quot;</span>)
-            .<span class='ident'>is_err</span>());
+               .<span class='ident'>is_err</span>());
 }
 
 <span class='attribute'>#[<span class='ident'>test</span>]</span>
@@ -976,7 +972,7 @@
     <span class='ident'>cfg</span>.<span class='ident'>set_ca_file</span>(<span class='string'>&quot;tests/cert.pem&quot;</span>).<span class='ident'>unwrap</span>();
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>cli</span> <span class='op'>=</span> <span class='ident'>TlsContext</span>::<span class='ident'>new_client</span>().<span class='ident'>unwrap</span>();
     <span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>cli</span>.<span class='ident'>connect_servername</span>(<span class='string'>&quot;www.google.com&quot;</span>, <span class='string'>&quot;&quot;</span>, <span class='string'>&quot;&quot;</span>)
-            .<span class='ident'>is_err</span>());
+               .<span class='ident'>is_err</span>());
 }
 </pre>
 </section>
