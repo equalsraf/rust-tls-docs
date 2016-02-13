@@ -46,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-223' class='srclink' href='../src/telos/lib.rs.html#98-101' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-223' class='srclink' href='../src/telos/lib.rs.html#97-100' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct ClientBuilder {
     // some fields omitted
 }</pre><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../telos/struct.ClientBuilder.html' title='telos::ClientBuilder'>ClientBuilder</a></code></h3><div class='impl-items'><h4 id='method.ca_file' class='method'><code>fn <a href='#method.ca_file' class='fnname'>ca_file</a>(self, path: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; Self</code></h4>
@@ -62,7 +62,7 @@
 <div class='docblock'><p>Disable certificate verification</p>
 </div><h4 id='method.insecure_noverifyname' class='method'><code>fn <a href='#method.insecure_noverifyname' class='fnname'>insecure_noverifyname</a>(self) -&gt; Self</code></h4>
 <div class='docblock'><p>Disable hostname verification</p>
-</div><h4 id='method.connect_socket' class='method'><code>fn <a href='#method.connect_socket' class='fnname'>connect_socket</a>(self, fd: <a class='type' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/type.RawFd.html' title='std::sys::ext::io::RawFd'>RawFd</a>, servername: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='type' href='../telos/raw/type.TlsResult.html' title='telos::raw::TlsResult'>TlsResult</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></h4>
+</div><h4 id='method.connect_socket' class='method'><code>fn <a href='#method.connect_socket' class='fnname'>connect_socket</a>&lt;R: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(self, r: &amp;R, servername: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='type' href='../telos/raw/type.TlsResult.html' title='telos::raw::TlsResult'>TlsResult</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></h4>
 <div class='docblock'><p>Establish a TLS connection over an existing file descriptor</p>
 </div><h4 id='method.connect' class='method'><code>fn <a href='#method.connect' class='fnname'>connect</a>&lt;F: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(self, inner_stream: F, servername: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='type' href='../telos/raw/type.TlsResult.html' title='telos::raw::TlsResult'>TlsResult</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;F&gt;&gt;</code></h4>
 <div class='docblock'><p>Connects over an existing stream. See <code>TlsStream::inner</code>.</p>
