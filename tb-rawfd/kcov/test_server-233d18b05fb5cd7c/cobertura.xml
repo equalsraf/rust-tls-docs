@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.466" version="1.9" timestamp="1455391115">
+<coverage line-rate="0.462" version="1.9" timestamp="1455392354">
 	<sources>
 		<source>/home/travis/build/equalsraf/telos/</source>
 	</sources>
 	<packages>
-		<package name="test_server_233d18b05fb5cd7c" line-rate="0.466" branch-rate="1.0" complexity="1.0">
+		<package name="test_server_233d18b05fb5cd7c" line-rate="0.462" branch-rate="1.0" complexity="1.0">
 			<classes>
 				<class name="tls_config_c" filename="libressl-2.3.1/tls/tls_config.c" line-rate="0.554">
 					<lines>
@@ -712,98 +712,89 @@
 						<line number="436" hits="1"/>
 					</lines>
 				</class>
-				<class name="lib_rs" filename="telos/src/lib.rs" line-rate="0.878">
+				<class name="lib_rs" filename="telos/src/lib.rs" line-rate="0.864">
 					<lines>
 						<line number="2" hits="0"/>
-						<line number="158" hits="1"/>
-						<line number="159" hits="1"/>
-						<line number="160" hits="0"/>
 						<line number="162" hits="1"/>
 						<line number="163" hits="1"/>
-						<line number="165" hits="1"/>
-						<line number="166" hits="2"/>
-						<line number="168" hits="1"/>
+						<line number="164" hits="0"/>
+						<line number="166" hits="1"/>
+						<line number="167" hits="1"/>
 						<line number="169" hits="1"/>
-						<line number="170" hits="0"/>
+						<line number="170" hits="2"/>
 						<line number="172" hits="1"/>
 						<line number="173" hits="1"/>
-						<line number="175" hits="1"/>
-						<line number="176" hits="2"/>
+						<line number="174" hits="0"/>
+						<line number="176" hits="1"/>
+						<line number="177" hits="1"/>
 						<line number="179" hits="1"/>
-						<line number="180" hits="1"/>
-						<line number="183" hits="2"/>
-						<line number="185" hits="1"/>
-						<line number="186" hits="1"/>
-						<line number="187" hits="1"/>
-						<line number="188" hits="2"/>
-						<line number="192" hits="3"/>
-						<line number="193" hits="2"/>
-						<line number="194" hits="1"/>
-						<line number="195" hits="1"/>
-						<line number="196" hits="1"/>
-						<line number="197" hits="1"/>
-						<line number="203" hits="3"/>
-						<line number="204" hits="2"/>
-						<line number="205" hits="1"/>
-						<line number="206" hits="1"/>
-						<line number="232" hits="1"/>
-						<line number="233" hits="1"/>
-						<line number="234" hits="0"/>
-						<line number="236" hits="0"/>
-						<line number="240" hits="1"/>
-						<line number="254" hits="1"/>
-						<line number="267" hits="2"/>
-						<line number="268" hits="1"/>
-						<line number="334" hits="2"/>
-						<line number="335" hits="2"/>
-						<line number="336" hits="1"/>
-						<line number="337" hits="0"/>
-						<line number="342" hits="2"/>
+						<line number="180" hits="2"/>
+						<line number="183" hits="1"/>
+						<line number="184" hits="1"/>
+						<line number="187" hits="2"/>
+						<line number="189" hits="1"/>
+						<line number="190" hits="1"/>
+						<line number="191" hits="1"/>
+						<line number="192" hits="2"/>
+						<line number="206" hits="3"/>
+						<line number="207" hits="2"/>
+						<line number="208" hits="1"/>
+						<line number="209" hits="1"/>
+						<line number="210" hits="1"/>
+						<line number="241" hits="1"/>
+						<line number="242" hits="1"/>
+						<line number="243" hits="0"/>
+						<line number="245" hits="0"/>
+						<line number="249" hits="1"/>
+						<line number="263" hits="1"/>
+						<line number="276" hits="2"/>
+						<line number="277" hits="1"/>
 						<line number="343" hits="2"/>
-						<line number="344" hits="1"/>
-						<line number="345" hits="0"/>
-						<line number="353" hits="2"/>
-						<line number="354" hits="1"/>
-						<line number="364" hits="1"/>
-						<line number="365" hits="1"/>
-						<line number="366" hits="0"/>
-						<line number="368" hits="1"/>
-						<line number="369" hits="1"/>
-						<line number="371" hits="1"/>
-						<line number="372" hits="3"/>
+						<line number="344" hits="2"/>
+						<line number="345" hits="1"/>
+						<line number="346" hits="0"/>
+						<line number="351" hits="2"/>
+						<line number="352" hits="2"/>
+						<line number="353" hits="1"/>
+						<line number="354" hits="0"/>
+						<line number="362" hits="2"/>
+						<line number="363" hits="1"/>
 						<line number="373" hits="1"/>
 						<line number="374" hits="1"/>
 						<line number="375" hits="0"/>
 						<line number="377" hits="1"/>
 						<line number="378" hits="1"/>
 						<line number="380" hits="1"/>
-						<line number="381" hits="2"/>
-						<line number="384" hits="1"/>
-						<line number="385" hits="1"/>
-						<line number="388" hits="2"/>
-						<line number="390" hits="1"/>
-						<line number="391" hits="1"/>
-						<line number="392" hits="1"/>
-						<line number="393" hits="2"/>
+						<line number="381" hits="3"/>
+						<line number="382" hits="1"/>
+						<line number="383" hits="1"/>
+						<line number="384" hits="0"/>
+						<line number="386" hits="1"/>
+						<line number="387" hits="1"/>
+						<line number="389" hits="1"/>
+						<line number="390" hits="2"/>
+						<line number="393" hits="1"/>
 						<line number="394" hits="1"/>
-						<line number="395" hits="2"/>
-						<line number="396" hits="1"/>
 						<line number="397" hits="2"/>
+						<line number="399" hits="1"/>
+						<line number="400" hits="1"/>
 						<line number="401" hits="1"/>
-						<line number="402" hits="1"/>
-						<line number="403" hits="0"/>
-						<line number="405" hits="0"/>
-						<line number="409" hits="1"/>
-						<line number="423" hits="1"/>
-						<line number="433" hits="2"/>
-						<line number="434" hits="1"/>
-						<line number="435" hits="2"/>
-						<line number="436" hits="1"/>
-						<line number="437" hits="1"/>
-						<line number="442" hits="3"/>
-						<line number="443" hits="2"/>
-						<line number="444" hits="1"/>
-						<line number="445" hits="1"/>
+						<line number="402" hits="2"/>
+						<line number="403" hits="1"/>
+						<line number="404" hits="2"/>
+						<line number="405" hits="1"/>
+						<line number="406" hits="2"/>
+						<line number="410" hits="1"/>
+						<line number="411" hits="1"/>
+						<line number="412" hits="0"/>
+						<line number="414" hits="0"/>
+						<line number="418" hits="1"/>
+						<line number="432" hits="1"/>
+						<line number="450" hits="3"/>
+						<line number="451" hits="1"/>
+						<line number="452" hits="2"/>
+						<line number="453" hits="1"/>
+						<line number="454" hits="1"/>
 					</lines>
 				</class>
 				<class name="tls_verify_c" filename="libressl-2.3.1/tls/tls_verify.c" line-rate="0.000">

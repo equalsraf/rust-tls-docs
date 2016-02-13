@@ -46,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/telos/lib.rs.html#1-499' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-0' class='srclink' href='../src/telos/lib.rs.html#1-512' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Rust bindings for <a href="http://libressl.org">libressl</a>&#39;s libtls
 For the authoritative source on the inner workings of libtls check
 the <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/tls_accept_fds.3?query=tls_init&amp;sec=3">manpage</a>.
@@ -95,11 +95,15 @@ sockets to be closed, you need to close them yourself.</p>
 <p>Likewise it is up to the caller to make sure the socket is not closed
 too early. This example fails to keep the original TcpStream in scope</p>
 <pre class='rust rust-example-rendered'>
+<span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>unix</span>)]</span>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>unix</span>::<span class='ident'>io</span>::<span class='ident'>AsRawFd</span>;
+<span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>windows</span>)]</span>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>windows</span>::<span class='ident'>io</span>::<span class='ident'>AsRawSocket</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>TcpStream</span>;
-<span class='kw'>fn</span> <span class='ident'>create_client</span>() <span class='op'>-&gt;</span> <span class='ident'>telos</span>::<span class='ident'>TlsStream</span><span class='op'>&lt;</span><span class='ident'>TcpStream</span><span class='op'>&gt;</span> {
+<span class='kw'>fn</span> <span class='ident'>create_client</span>() <span class='op'>-&gt;</span> <span class='ident'>telos</span>::<span class='ident'>TlsStream</span><span class='op'>&lt;</span>()<span class='op'>&gt;</span> {
     <span class='kw'>let</span> <span class='ident'>tcp</span> <span class='op'>=</span> <span class='ident'>TcpStream</span>::<span class='ident'>connect</span>(<span class='string'>&quot;google.com:443&quot;</span>).<span class='ident'>unwrap</span>();
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>client</span> <span class='op'>=</span> <span class='ident'>telos</span>::<span class='ident'>new_client</span>()
-        .<span class='ident'>connect_socket</span>(<span class='kw-2'>&amp;</span><span class='ident'>tcp</span>, <span class='string'>&quot;google.com&quot;</span>)
+        .<span class='ident'>connect_socket</span>(<span class='ident'>tcp</span>.<span class='ident'>as_raw_fd</span>(), <span class='string'>&quot;google.com&quot;</span>)
         .<span class='ident'>unwrap</span>();
     <span class='ident'>client</span>
 }
