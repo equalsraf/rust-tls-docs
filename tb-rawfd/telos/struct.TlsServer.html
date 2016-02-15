@@ -46,12 +46,14 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-372' class='srclink' href='../src/telos/lib.rs.html#440-442' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-372' class='srclink' href='../src/telos/lib.rs.html#442-444' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct TlsServer {
     // some fields omitted
 }</pre><div class='docblock'><p>TLS Server, used to start TLS session over existing sockets.</p>
 </div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../telos/struct.TlsServer.html' title='telos::TlsServer'>TlsServer</a></code></h3><div class='impl-items'><h4 id='method.accept_socket' class='method'><code>fn <a href='#method.accept_socket' class='fnname'>accept_socket</a>&lt;R: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(&amp;mut self, r: &amp;R) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></h4>
-<div class='docblock'><p>Start a new TLS connection over an existing file descriptor (server-side)</p>
+<div class='docblock'><p>Start a new TLS connection over an existing file descriptor (server-side)
+Unlike <code>connect()</code> this does not take ownership, see the main crate docs <a href="index.html#connection-lifetime">for an
+example</a>.</p>
 </div><h4 id='method.accept' class='method'><code>fn <a href='#method.accept' class='fnname'>accept</a>&lt;F: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(&amp;mut self, inner_stream: F) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;F&gt;&gt;</code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>

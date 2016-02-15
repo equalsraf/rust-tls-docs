@@ -441,10 +441,10 @@ var data = {lines:[
 {"lineNum":"  440","line":"    ($t:ty, $min:expr, $max:expr) => {"},
 {"lineNum":"  441","line":"        impl Bounded for $t {"},
 {"lineNum":"  442","line":"            #[inline]"},
-{"lineNum":"  443","line":"            fn min_value() -> $t { $min }","class":"linePartCov","hits":"2","order":"1047","possible_hits":"3",},
+{"lineNum":"  443","line":"            fn min_value() -> $t { $min }","class":"linePartCov","hits":"2","order":"1045","possible_hits":"3",},
 {"lineNum":"  444","line":""},
 {"lineNum":"  445","line":"            #[inline]"},
-{"lineNum":"  446","line":"            fn max_value() -> $t { $max }","class":"linePartCov","hits":"2","order":"1051","possible_hits":"3",},
+{"lineNum":"  446","line":"            fn max_value() -> $t { $max }","class":"linePartCov","hits":"2","order":"1047","possible_hits":"3",},
 {"lineNum":"  447","line":"        }"},
 {"lineNum":"  448","line":"    }"},
 {"lineNum":"  449","line":"}"},
@@ -984,9 +984,9 @@ var data = {lines:[
 {"lineNum":"  983","line":"                Some($slf as $DstT)"},
 {"lineNum":"  984","line":"            } else {"},
 {"lineNum":"  985","line":"                let n = $slf as i64;"},
-{"lineNum":"  986","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1045","possible_hits":"1",},
-{"lineNum":"  987","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1050","possible_hits":"1",},
-{"lineNum":"  988","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"1052","possible_hits":"1",},
+{"lineNum":"  986","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1044","possible_hits":"1",},
+{"lineNum":"  987","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1046","possible_hits":"1",},
+{"lineNum":"  988","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"1050","possible_hits":"1",},
 {"lineNum":"  989","line":"                    Some($slf as $DstT)"},
 {"lineNum":"  990","line":"                } else {"},
 {"lineNum":"  991","line":"                    None"},
@@ -2451,5 +2451,5 @@ var data = {lines:[
 {"lineNum":" 2450","line":"float_impl!(f64 integer_decode_f64);"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-e477f43d15ca0050", "date" : "2016-02-13 23:42:07", "instrumented" : 7, "covered" : 7,};
+var header = { "command" : "test_client-e477f43d15ca0050", "date" : "2016-02-15 11:12:21", "instrumented" : 7, "covered" : 7,};
 var merged_data = [];

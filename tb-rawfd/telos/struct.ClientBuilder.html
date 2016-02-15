@@ -63,7 +63,9 @@
 </div><h4 id='method.insecure_noverifyname' class='method'><code>fn <a href='#method.insecure_noverifyname' class='fnname'>insecure_noverifyname</a>(self) -&gt; Self</code></h4>
 <div class='docblock'><p>Disable hostname verification</p>
 </div><h4 id='method.connect_socket' class='method'><code>fn <a href='#method.connect_socket' class='fnname'>connect_socket</a>&lt;R: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(self, r: &amp;R, servername: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='type' href='../telos/raw/type.TlsResult.html' title='telos::raw::TlsResult'>TlsResult</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></h4>
-<div class='docblock'><p>Establish a TLS connection over an existing file descriptor</p>
+<div class='docblock'><p>Establish a TLS connection over an existing file descriptor. Unlike <code>connect()</code>
+this does not take ownership, see the main crate docs <a href="index.html#connection-lifetime">for an
+example</a>.</p>
 </div><h4 id='method.connect' class='method'><code>fn <a href='#method.connect' class='fnname'>connect</a>&lt;F: <a class='trait' href='https://doc.rust-lang.org/nightly/std/sys/ext/io/trait.AsRawFd.html' title='std::sys::ext::io::AsRawFd'>AsRawFd</a>&gt;(self, inner_stream: F, servername: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='type' href='../telos/raw/type.TlsResult.html' title='telos::raw::TlsResult'>TlsResult</a>&lt;<a class='struct' href='../telos/struct.TlsStream.html' title='telos::TlsStream'>TlsStream</a>&lt;F&gt;&gt;</code></h4>
 <div class='docblock'><p>Connects over an existing stream. See <code>TlsStream::inner</code>.</p>
 </div></div></section>
