@@ -1,0 +1,8 @@
+var data = {files:[
+{"link":"telos-913973b0e3c8134e/index.html","title":"telos-913973b0e3c8134e","summary_name":"telos-913973b0e3c8134e","covered_class":"linePartCov","covered":"51.3","covered_lines":"669","uncovered_lines":"635","total_lines" : "1304"},
+{"link":"test_client-e477f43d15ca0050/index.html","title":"test_client-e477f43d15ca0050","summary_name":"test_client-e477f43d15ca0050","covered_class":"linePartCov","covered":"56.2","covered_lines":"794","uncovered_lines":"618","total_lines" : "1412"},
+{"link":"test_server-9ef2987148640087/index.html","title":"test_server-9ef2987148640087","summary_name":"test_server-9ef2987148640087","covered_class":"linePartCov","covered":"49.6","covered_lines":"618","uncovered_lines":"629","total_lines" : "1247"},
+], merged_files:[{"link":"kcov-merged/index.html","title":"[merged]","summary_name":"[merged]","covered_class":"linePartCov","covered":"72.9","covered_lines":"1127","uncovered_lines":"419","total_lines" : "1546"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-16 11:25:26", "instrumented" : 3963, "covered" : 2081,};
