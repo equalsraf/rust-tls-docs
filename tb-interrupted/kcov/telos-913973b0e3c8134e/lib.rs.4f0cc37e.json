@@ -513,15 +513,15 @@ var data = {lines:[
 {"lineNum":"  512","line":"    // These are the defaults before the connection is set"},
 {"lineNum":"  513","line":"    assert_eq!(c.conn_version(), \"\");"},
 {"lineNum":"  514","line":"    assert_eq!(c.conn_cipher(), \"\");"},
-{"lineNum":"  515","line":"    assert!(c.peer_cert_notbefore().is_err());","class":"linePartCov","hits":"1","order":"180","possible_hits":"2",},
-{"lineNum":"  516","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"437","possible_hits":"2",},
+{"lineNum":"  515","line":"    assert!(c.peer_cert_notbefore().is_err());","class":"linePartCov","hits":"1","order":"181","possible_hits":"2",},
+{"lineNum":"  516","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"663","possible_hits":"2",},
 {"lineNum":"  517","line":"    assert_eq!(c.peer_cert_issuer(), \"\");"},
 {"lineNum":"  518","line":"    assert_eq!(c.peer_cert_subject(), \"\");"},
 {"lineNum":"  519","line":"    assert_eq!(c.peer_cert_hash(), \"\");"},
 {"lineNum":"  520","line":"    assert_eq!(c.peer_cert_contains_name(\"some.name\"), false);"},
 {"lineNum":"  521","line":"    assert_eq!(c.peer_cert_provided(), false);"},
-{"lineNum":"  522","line":"}","class":"linePartCov","hits":"1","order":"652","possible_hits":"2",},
+{"lineNum":"  522","line":"}","class":"linePartCov","hits":"1","order":"716","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-02-16 22:29:14", "instrumented" : 18, "covered" : 18,};
+var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-02-16 22:34:39", "instrumented" : 18, "covered" : 18,};
 var merged_data = [];

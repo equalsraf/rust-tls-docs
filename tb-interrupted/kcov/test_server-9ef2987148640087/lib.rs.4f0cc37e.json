@@ -367,8 +367,8 @@ var data = {lines:[
 {"lineNum":"  366","line":"}"},
 {"lineNum":"  367","line":""},
 {"lineNum":"  368","line":"impl<T> Drop for TlsStream<T> {"},
-{"lineNum":"  369","line":"    fn drop(&mut self) {","class":"linePartCov","hits":"2","order":"901","possible_hits":"3",},
-{"lineNum":"  370","line":"        let _ = self.ctx.close();","class":"lineCov","hits":"1","order":"902","possible_hits":"1",},
+{"lineNum":"  369","line":"    fn drop(&mut self) {","class":"linePartCov","hits":"2","order":"903","possible_hits":"3",},
+{"lineNum":"  370","line":"        let _ = self.ctx.close();","class":"lineCov","hits":"1","order":"904","possible_hits":"1",},
 {"lineNum":"  371","line":"    }"},
 {"lineNum":"  372","line":"}"},
 {"lineNum":"  373","line":""},
@@ -523,5 +523,5 @@ var data = {lines:[
 {"lineNum":"  522","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-16 22:29:23", "instrumented" : 81, "covered" : 70,};
+var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-16 22:34:48", "instrumented" : 81, "covered" : 70,};
 var merged_data = [];

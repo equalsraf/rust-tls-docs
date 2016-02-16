@@ -37,7 +37,7 @@ var data = {lines:[
 {"lineNum":"   36","line":"    //"},
 {"lineNum":"   37","line":"    // note: this constructor is purposedly not named to `new` to discourage the direct usage."},
 {"lineNum":"   38","line":"    #[inline]"},
-{"lineNum":"   39","line":"    pub fn from_utc(datetime: NaiveDateTime, offset: Tz::Offset) -> DateTime<Tz> {","class":"linePartCov","hits":"2","order":"1138","possible_hits":"3",},
+{"lineNum":"   39","line":"    pub fn from_utc(datetime: NaiveDateTime, offset: Tz::Offset) -> DateTime<Tz> {","class":"linePartCov","hits":"2","order":"1091","possible_hits":"3",},
 {"lineNum":"   40","line":"        DateTime { datetime: datetime, offset: offset }"},
 {"lineNum":"   41","line":"    }"},
 {"lineNum":"   42","line":""},
@@ -274,8 +274,8 @@ var data = {lines:[
 {"lineNum":"  273","line":"}"},
 {"lineNum":"  274","line":""},
 {"lineNum":"  275","line":"impl<Tz: TimeZone> PartialOrd for DateTime<Tz> {"},
-{"lineNum":"  276","line":"    fn partial_cmp(&self, other: &DateTime<Tz>) -> Option<Ordering> {","class":"linePartCov","hits":"2","order":"1154","possible_hits":"3",},
-{"lineNum":"  277","line":"        self.datetime.partial_cmp(&other.datetime)","class":"lineCov","hits":"1","order":"1155","possible_hits":"1",},
+{"lineNum":"  276","line":"    fn partial_cmp(&self, other: &DateTime<Tz>) -> Option<Ordering> {","class":"linePartCov","hits":"2","order":"1113","possible_hits":"3",},
+{"lineNum":"  277","line":"        self.datetime.partial_cmp(&other.datetime)","class":"lineCov","hits":"1","order":"1114","possible_hits":"1",},
 {"lineNum":"  278","line":"    }"},
 {"lineNum":"  279","line":"}"},
 {"lineNum":"  280","line":""},
@@ -625,5 +625,5 @@ var data = {lines:[
 {"lineNum":"  624","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-e477f43d15ca0050", "date" : "2016-02-16 22:29:17", "instrumented" : 3, "covered" : 3,};
+var header = { "command" : "test_client-e477f43d15ca0050", "date" : "2016-02-16 22:34:42", "instrumented" : 3, "covered" : 3,};
 var merged_data = [];

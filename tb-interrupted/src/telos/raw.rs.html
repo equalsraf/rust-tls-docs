@@ -570,11 +570,11 @@
         <span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>msg</span>
     }
 }
-<span class='doccomment'>/// Convert TlsError to io::Error, use WouldBlock if applicable</span>
+<span class='doccomment'>/// Convert TlsError to io::Error, use std::io::ErrorKindInterrupted if applicable</span>
 <span class='kw'>impl</span> <span class='ident'>convert</span>::<span class='ident'>From</span><span class='op'>&lt;</span><span class='ident'>TlsError</span><span class='op'>&gt;</span> <span class='kw'>for</span> <span class='ident'>io</span>::<span class='ident'>Error</span> {
     <span class='kw'>fn</span> <span class='ident'>from</span>(<span class='ident'>err</span>: <span class='ident'>TlsError</span>) <span class='op'>-&gt;</span> <span class='kw'>Self</span> {
         <span class='kw'>match</span> <span class='ident'>err</span>.<span class='ident'>code</span> {
-            <span class='ident'>ffi</span>::<span class='ident'>WANT_POLLIN</span> <span class='op'>|</span> <span class='ident'>ffi</span>::<span class='ident'>WANT_POLLOUT</span> <span class='op'>=&gt;</span> <span class='ident'>io</span>::<span class='ident'>Error</span>::<span class='ident'>new</span>(<span class='ident'>io</span>::<span class='ident'>ErrorKind</span>::<span class='ident'>WouldBlock</span>, <span class='ident'>err</span>),
+            <span class='ident'>ffi</span>::<span class='ident'>WANT_POLLIN</span> <span class='op'>|</span> <span class='ident'>ffi</span>::<span class='ident'>WANT_POLLOUT</span> <span class='op'>=&gt;</span> <span class='ident'>io</span>::<span class='ident'>Error</span>::<span class='ident'>new</span>(<span class='ident'>io</span>::<span class='ident'>ErrorKind</span>::<span class='ident'>Interrupted</span>, <span class='ident'>err</span>),
             _ <span class='op'>=&gt;</span> <span class='ident'>io</span>::<span class='ident'>Error</span>::<span class='ident'>new</span>(<span class='ident'>io</span>::<span class='ident'>ErrorKind</span>::<span class='ident'>Other</span>, <span class='ident'>err</span>.<span class='ident'>msg</span>),
         }
     }
