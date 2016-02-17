@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
-<coverage line-rate="0.000" version="1.9" timestamp="1455662079">
+<coverage line-rate="0.000" version="1.9" timestamp="1455715360">
 	<sources>
 		<source>/home/travis/</source>
 	</sources>
@@ -219,6 +219,21 @@
 						<line number="335" hits="0"/>
 					</lines>
 				</class>
+				<class name="integer_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/num-0.1.31/src/integer.rs" line-rate="0.000">
+					<lines>
+						<line number="163" hits="0"/>
+						<line number="169" hits="0"/>
+						<line number="206" hits="0"/>
+						<line number="209" hits="0"/>
+						<line number="210" hits="0"/>
+						<line number="211" hits="0"/>
+						<line number="212" hits="0"/>
+						<line number="283" hits="0"/>
+						<line number="284" hits="0"/>
+						<line number="532" hits="0"/>
+						<line number="533" hits="0"/>
+					</lines>
+				</class>
 				<class name="date_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/chrono-0.2.19/src/naive/date.rs" line-rate="0.000">
 					<lines>
 						<line number="75" hits="0"/>
@@ -257,6 +272,17 @@
 						<line number="1845" hits="0"/>
 						<line number="1846" hits="0"/>
 						<line number="1847" hits="0"/>
+					</lines>
+				</class>
+				<class name="traits_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/num-0.1.31/src/traits.rs" line-rate="0.000">
+					<lines>
+						<line number="439" hits="0"/>
+						<line number="442" hits="0"/>
+						<line number="1072" hits="0"/>
+						<line number="1076" hits="0"/>
+						<line number="1077" hits="0"/>
+						<line number="1078" hits="0"/>
+						<line number="1112" hits="0"/>
 					</lines>
 				</class>
 				<class name="time_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/chrono-0.2.19/src/naive/time.rs" line-rate="0.000">
@@ -305,32 +331,6 @@
 						<line number="80" hits="0"/>
 						<line number="81" hits="0"/>
 						<line number="82" hits="1"/>
-					</lines>
-				</class>
-				<class name="integer_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/num-0.1.30/src/integer.rs" line-rate="0.000">
-					<lines>
-						<line number="163" hits="0"/>
-						<line number="169" hits="0"/>
-						<line number="206" hits="0"/>
-						<line number="209" hits="0"/>
-						<line number="210" hits="0"/>
-						<line number="211" hits="0"/>
-						<line number="212" hits="0"/>
-						<line number="283" hits="0"/>
-						<line number="284" hits="0"/>
-						<line number="532" hits="0"/>
-						<line number="533" hits="0"/>
-					</lines>
-				</class>
-				<class name="traits_rs" filename=".cargo/registry/src/github.com-88ac128001ac3a9a/num-0.1.30/src/traits.rs" line-rate="0.000">
-					<lines>
-						<line number="443" hits="0"/>
-						<line number="446" hits="0"/>
-						<line number="982" hits="0"/>
-						<line number="986" hits="0"/>
-						<line number="987" hits="0"/>
-						<line number="988" hits="0"/>
-						<line number="1022" hits="0"/>
 					</lines>
 				</class>
 				<class name="tls_util_c" filename="build/equalsraf/telos/libressl-2.3.1/tls/tls_util.c" line-rate="0.140">

@@ -153,11 +153,11 @@ var data = {lines:[
 {"lineNum":"  152","line":"        if self.error.is_some() {","class":"lineCov","hits":"1","order":"960",},
 {"lineNum":"  153","line":"            return self;","class":"lineNoCov","hits":"0",},
 {"lineNum":"  154","line":"        }"},
-{"lineNum":"  155","line":"        if let Some(cfg) = self.cfg.as_mut() {","class":"lineCov","hits":"1","order":"961",},
-{"lineNum":"  156","line":"            self.error = cfg.set_ciphers(ciphers).err();","class":"lineCov","hits":"1","order":"962",},
+{"lineNum":"  155","line":"        if let Some(cfg) = self.cfg.as_mut() {","class":"lineCov","hits":"1","order":"962",},
+{"lineNum":"  156","line":"            self.error = cfg.set_ciphers(ciphers).err();","class":"lineCov","hits":"1","order":"963",},
 {"lineNum":"  157","line":"        }"},
-{"lineNum":"  158","line":"        self","class":"lineCov","hits":"1","order":"963",},
-{"lineNum":"  159","line":"    }","class":"lineCov","hits":"1","order":"964",},
+{"lineNum":"  158","line":"        self","class":"lineCov","hits":"1","order":"964",},
+{"lineNum":"  159","line":"    }","class":"lineCov","hits":"1","order":"965",},
 {"lineNum":"  160","line":"    /// Disable certificate verification"},
 {"lineNum":"  161","line":"    pub fn insecure_noverifycert(mut self) -> Self {","class":"lineCov","hits":"1","order":"296",},
 {"lineNum":"  162","line":"        if self.error.is_some() {","class":"lineCov","hits":"1","order":"297",},
@@ -195,8 +195,8 @@ var data = {lines:[
 {"lineNum":"  194","line":"    /// Establish a TLS connection over an existing file descriptor. Unlike `connect()`"},
 {"lineNum":"  195","line":"    /// this does not take ownership, see the main crate docs [for an"},
 {"lineNum":"  196","line":"    /// example](index.html#connection-lifetime)."},
-{"lineNum":"  197","line":"    pub fn connect_socket<R: AsRawFd>(self, r: &R, servername: &str) -> TlsResult<TlsStream<()>> {","class":"lineCov","hits":"1","order":"965",},
-{"lineNum":"  198","line":"        let mut ctx = try!(self.new_ctx());","class":"lineCov","hits":"1","order":"966",},
+{"lineNum":"  197","line":"    pub fn connect_socket<R: AsRawFd>(self, r: &R, servername: &str) -> TlsResult<TlsStream<()>> {","class":"lineCov","hits":"1","order":"966",},
+{"lineNum":"  198","line":"        let mut ctx = try!(self.new_ctx());","class":"lineCov","hits":"1","order":"967",},
 {"lineNum":"  199","line":"        try!(ctx.connect_socket(r.as_raw_fd(), servername));","class":"lineCov","hits":"1","order":"917",},
 {"lineNum":"  200","line":"        Ok(TlsStream {","class":"lineCov","hits":"1","order":"918",},
 {"lineNum":"  201","line":"            ctx: ctx,","class":"lineCov","hits":"1","order":"919",},
@@ -351,7 +351,7 @@ var data = {lines:[
 {"lineNum":"  350","line":"    fn read(&mut self, buf: &mut [u8]) -> io::Result<usize> {","class":"lineCov","hits":"1","order":"366",},
 {"lineNum":"  351","line":"        self.ctx","class":"lineCov","hits":"1","order":"367",},
 {"lineNum":"  352","line":"            .read(buf)","class":"lineCov","hits":"1","order":"368",},
-{"lineNum":"  353","line":"            .map_err(|err| io::Error::from(err))","class":"lineNoCov","hits":"0",},
+{"lineNum":"  353","line":"            .map_err(|err| io::Error::from(err))","class":"lineCov","hits":"1","order":"961",},
 {"lineNum":"  354","line":"    }"},
 {"lineNum":"  355","line":"}"},
 {"lineNum":"  356","line":""},
@@ -523,5 +523,5 @@ var data = {lines:[
 {"lineNum":"  522","line":"}","class":"lineCov","hits":"1","order":"631",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-16 22:34:48", "instrumented" : 154, "covered" : 138,};
+var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-17 13:22:50", "instrumented" : 154, "covered" : 139,};
 var merged_data = [];

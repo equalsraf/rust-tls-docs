@@ -195,7 +195,7 @@ var data = {lines:[
 {"lineNum":"  194","line":"\t}"},
 {"lineNum":"  195","line":""},
 {"lineNum":"  196","line":"\tif (tls_configure_ssl(ctx) != 0)","class":"lineCov","hits":"1","order":"344",},
-{"lineNum":"  197","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"1113",},
+{"lineNum":"  197","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"1116",},
 {"lineNum":"  198","line":"\tif (tls_configure_keypair(ctx, 0) != 0)","class":"lineCov","hits":"1","order":"345",},
 {"lineNum":"  199","line":"\t\tgoto err;","class":"lineNoCov","hits":"0",},
 {"lineNum":"  200","line":""},
@@ -208,7 +208,7 @@ var data = {lines:[
 {"lineNum":"  207","line":""},
 {"lineNum":"  208","line":"\tif (ctx->config->verify_cert &&","class":"lineCov","hits":"1","order":"352",},
 {"lineNum":"  209","line":"\t    (tls_configure_ssl_verify(ctx, SSL_VERIFY_PEER) == -1))","class":"lineCov","hits":"1","order":"854",},
-{"lineNum":"  210","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"1110",},
+{"lineNum":"  210","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"1113",},
 {"lineNum":"  211","line":""},
 {"lineNum":"  212","line":"\tif ((ctx->ssl_conn = SSL_new(ctx->ssl_ctx)) == NULL) {","class":"lineCov","hits":"1","order":"353",},
 {"lineNum":"  213","line":"\t\ttls_set_errorx(ctx, \"ssl connection failure\");","class":"lineNoCov","hits":"0",},
@@ -257,11 +257,11 @@ var data = {lines:[
 {"lineNum":"  256","line":""},
 {"lineNum":"  257","line":"\tERR_clear_error();","class":"lineCov","hits":"1","order":"382",},
 {"lineNum":"  258","line":"\tif ((ssl_ret = SSL_connect(ctx->ssl_conn)) != 1) {","class":"lineCov","hits":"1","order":"383",},
-{"lineNum":"  259","line":"\t\trv = tls_ssl_error(ctx, ctx->ssl_conn, ssl_ret, \"handshake\");","class":"lineCov","hits":"1","order":"1111",},
-{"lineNum":"  260","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"1112",},
+{"lineNum":"  259","line":"\t\trv = tls_ssl_error(ctx, ctx->ssl_conn, ssl_ret, \"handshake\");","class":"lineCov","hits":"1","order":"1114",},
+{"lineNum":"  260","line":"\t\tgoto err;","class":"lineCov","hits":"1","order":"1115",},
 {"lineNum":"  261","line":"\t}"},
 {"lineNum":"  262","line":""},
-{"lineNum":"  263","line":"\tif (ctx->config->verify_name) {","class":"lineCov","hits":"1","order":"389",},
+{"lineNum":"  263","line":"\tif (ctx->config->verify_name) {","class":"lineCov","hits":"1","order":"423",},
 {"lineNum":"  264","line":"\t\tcert = SSL_get_peer_certificate(ctx->ssl_conn);","class":"lineCov","hits":"1","order":"863",},
 {"lineNum":"  265","line":"\t\tif (cert == NULL) {","class":"lineCov","hits":"1","order":"864",},
 {"lineNum":"  266","line":"\t\t\ttls_set_errorx(ctx, \"no server certificate\");","class":"lineNoCov","hits":"0",},
@@ -286,5 +286,5 @@ var data = {lines:[
 {"lineNum":"  285","line":"}","class":"lineCov","hits":"1","order":"428",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-16 22:34:48", "instrumented" : 141, "covered" : 98,};
+var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-17 13:22:50", "instrumented" : 141, "covered" : 98,};
 var merged_data = [];

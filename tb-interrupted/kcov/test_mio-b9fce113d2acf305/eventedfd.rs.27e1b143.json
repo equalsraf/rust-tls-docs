@@ -1,0 +1,31 @@
+var data = {lines:[
+{"lineNum":"    1","line":"use {io, Evented, EventSet, PollOpt, Selector, Token};"},
+{"lineNum":"    2","line":"use std::os::unix::io::RawFd;"},
+{"lineNum":"    3","line":""},
+{"lineNum":"    4","line":"/*"},
+{"lineNum":"    5","line":" *"},
+{"lineNum":"    6","line":" * ===== EventedFd ====="},
+{"lineNum":"    7","line":" *"},
+{"lineNum":"    8","line":" */"},
+{"lineNum":"    9","line":""},
+{"lineNum":"   10","line":"#[derive(Debug)]"},
+{"lineNum":"   11","line":""},
+{"lineNum":"   12","line":"pub struct EventedFd<\'a>(pub &\'a RawFd);"},
+{"lineNum":"   13","line":""},
+{"lineNum":"   14","line":"impl<\'a> Evented for EventedFd<\'a> {"},
+{"lineNum":"   15","line":"    fn register(&self, selector: &mut Selector, token: Token, interest: EventSet, opts: PollOpt) -> io::Result<()> {","class":"lineCov","hits":"1","order":"1176","possible_hits":"1",},
+{"lineNum":"   16","line":"        selector.register(*self.0, token, interest, opts)","class":"lineCov","hits":"1","order":"1177","possible_hits":"1",},
+{"lineNum":"   17","line":"    }","class":"linePartCov","hits":"1","order":"1178","possible_hits":"2",},
+{"lineNum":"   18","line":""},
+{"lineNum":"   19","line":"    fn reregister(&self, selector: &mut Selector, token: Token, interest: EventSet, opts: PollOpt) -> io::Result<()> {","class":"lineCov","hits":"1","order":"1745","possible_hits":"1",},
+{"lineNum":"   20","line":"        selector.reregister(*self.0, token, interest, opts)","class":"lineCov","hits":"1","order":"1746","possible_hits":"1",},
+{"lineNum":"   21","line":"    }","class":"linePartCov","hits":"1","order":"1752","possible_hits":"2",},
+{"lineNum":"   22","line":""},
+{"lineNum":"   23","line":"    fn deregister(&self, selector: &mut Selector) -> io::Result<()> {"},
+{"lineNum":"   24","line":"        selector.deregister(*self.0)"},
+{"lineNum":"   25","line":"    }"},
+{"lineNum":"   26","line":"}"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:22:44", "instrumented" : 6, "covered" : 6,};
+var merged_data = [];

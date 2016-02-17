@@ -183,8 +183,8 @@ var data = {lines:[
 {"lineNum":"  182","line":"}","class":"lineCov","hits":"1","order":"984","possible_hits":"1",},
 {"lineNum":"  183","line":""},
 {"lineNum":"  184","line":"void"},
-{"lineNum":"  185","line":"tls_free_conninfo(struct tls_conninfo *conninfo) {","class":"lineCov","hits":"1","order":"54","possible_hits":"1",},
-{"lineNum":"  186","line":"\tif (conninfo != NULL) {","class":"lineCov","hits":"1","order":"56","possible_hits":"1",},
+{"lineNum":"  185","line":"tls_free_conninfo(struct tls_conninfo *conninfo) {","class":"lineCov","hits":"1","order":"55","possible_hits":"1",},
+{"lineNum":"  186","line":"\tif (conninfo != NULL) {","class":"lineCov","hits":"1","order":"57","possible_hits":"1",},
 {"lineNum":"  187","line":"\t\tfree(conninfo->hash);","class":"lineCov","hits":"1","order":"998","possible_hits":"1",},
 {"lineNum":"  188","line":"\t\tconninfo->hash = NULL;","class":"lineCov","hits":"1","order":"999","possible_hits":"1",},
 {"lineNum":"  189","line":"\t\tfree(conninfo->subject);","class":"lineCov","hits":"1","order":"1000","possible_hits":"1",},
@@ -196,7 +196,7 @@ var data = {lines:[
 {"lineNum":"  195","line":"\t\tfree(conninfo->cipher);","class":"lineCov","hits":"1","order":"1006","possible_hits":"1",},
 {"lineNum":"  196","line":"\t\tconninfo->cipher = NULL;","class":"lineCov","hits":"1","order":"1007","possible_hits":"1",},
 {"lineNum":"  197","line":"\t}"},
-{"lineNum":"  198","line":"}","class":"lineCov","hits":"1","order":"58","possible_hits":"1",},
+{"lineNum":"  198","line":"}","class":"lineCov","hits":"1","order":"59","possible_hits":"1",},
 {"lineNum":"  199","line":""},
 {"lineNum":"  200","line":"const char *"},
 {"lineNum":"  201","line":"tls_conn_cipher(struct tls *ctx)"},
@@ -208,12 +208,12 @@ var data = {lines:[
 {"lineNum":"  207","line":""},
 {"lineNum":"  208","line":"const char *"},
 {"lineNum":"  209","line":"tls_conn_version(struct tls *ctx)"},
-{"lineNum":"  210","line":"{","class":"lineCov","hits":"1","order":"89","possible_hits":"1",},
-{"lineNum":"  211","line":"\tif (ctx->conninfo == NULL)","class":"lineCov","hits":"1","order":"91","possible_hits":"1",},
-{"lineNum":"  212","line":"\t\treturn (NULL);","class":"lineCov","hits":"1","order":"93","possible_hits":"1",},
+{"lineNum":"  210","line":"{","class":"lineCov","hits":"1","order":"90","possible_hits":"1",},
+{"lineNum":"  211","line":"\tif (ctx->conninfo == NULL)","class":"lineCov","hits":"1","order":"92","possible_hits":"1",},
+{"lineNum":"  212","line":"\t\treturn (NULL);","class":"lineCov","hits":"1","order":"94","possible_hits":"1",},
 {"lineNum":"  213","line":"\treturn (ctx->conninfo->version);","class":"lineNoCov","hits":"0","possible_hits":"1",},
-{"lineNum":"  214","line":"}","class":"linePartCov","hits":"1","order":"95","possible_hits":"2",},
+{"lineNum":"  214","line":"}","class":"linePartCov","hits":"1","order":"96","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-02-16 22:34:39", "instrumented" : 129, "covered" : 93,};
+var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-02-17 13:22:40", "instrumented" : 129, "covered" : 93,};
 var merged_data = [];

@@ -1,0 +1,27 @@
+var data = {lines:[
+{"lineNum":"    1","line":"#[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]","class":"lineCov","hits":"1","order":"1299",},
+{"lineNum":"    2","line":"pub struct Token(pub usize);","class":"lineCov","hits":"1","order":"1300",},
+{"lineNum":"    3","line":""},
+{"lineNum":"    4","line":"use slab;"},
+{"lineNum":"    5","line":""},
+{"lineNum":"    6","line":"impl Token {"},
+{"lineNum":"    7","line":"    #[inline]"},
+{"lineNum":"    8","line":"    pub fn as_usize(self) -> usize {","class":"lineCov","hits":"1","order":"1305",},
+{"lineNum":"    9","line":"        let Token(inner) = self;"},
+{"lineNum":"   10","line":"        inner","class":"lineCov","hits":"1","order":"1308",},
+{"lineNum":"   11","line":"    }","class":"lineCov","hits":"1","order":"1298",},
+{"lineNum":"   12","line":"}"},
+{"lineNum":"   13","line":""},
+{"lineNum":"   14","line":"impl slab::Index for Token {"},
+{"lineNum":"   15","line":"    fn from_usize(i: usize) -> Token {","class":"lineCov","hits":"1","order":"1301",},
+{"lineNum":"   16","line":"        Token(i)","class":"lineCov","hits":"1","order":"1302",},
+{"lineNum":"   17","line":"    }","class":"lineCov","hits":"1","order":"1303",},
+{"lineNum":"   18","line":""},
+{"lineNum":"   19","line":"    fn as_usize(&self) -> usize {","class":"lineCov","hits":"1","order":"1304",},
+{"lineNum":"   20","line":"        Token::as_usize(*self)","class":"lineCov","hits":"1","order":"1306",},
+{"lineNum":"   21","line":"    }","class":"lineCov","hits":"1","order":"1307",},
+{"lineNum":"   22","line":"}"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-02-17 13:22:50", "instrumented" : 11, "covered" : 11,};
+var merged_data = [];
