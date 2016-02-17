@@ -262,5 +262,5 @@ var data = {lines:[
 {"lineNum":"  261","line":"}","class":"lineNoCov","hits":"0","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:45:59", "instrumented" : 108, "covered" : 0,};
+var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 14:25:21", "instrumented" : 108, "covered" : 0,};
 var merged_data = [];

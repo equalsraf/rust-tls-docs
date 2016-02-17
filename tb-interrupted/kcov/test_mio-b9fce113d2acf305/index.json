@@ -44,5 +44,5 @@ var data = {files:[
 {"link":"tls_util.c.474ccc8e.html","title":"tls_util.c","summary_name":"/home/travis/build/equalsraf/telos/libressl-2.3.1/tls/tls_util.c","covered_class":"lineNoCov","covered":"0.0","covered_lines":"0","uncovered_lines":"86","total_lines" : "86"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:45:59", "instrumented" : 2031, "covered" : 1164,};
+var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 14:25:21", "instrumented" : 2031, "covered" : 1164,};
 var merged_data = [];

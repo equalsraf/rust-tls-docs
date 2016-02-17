@@ -83,5 +83,5 @@ var data = {lines:[
 {"lineNum":"   82","line":"}","class":"linePartCov","hits":"1","order":"129","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:45:59", "instrumented" : 17, "covered" : 16,};
+var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 14:25:21", "instrumented" : 17, "covered" : 16,};
 var merged_data = [];
