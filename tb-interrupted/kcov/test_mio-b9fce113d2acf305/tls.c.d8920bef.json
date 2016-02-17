@@ -522,5 +522,5 @@ var data = {lines:[
 {"lineNum":"  521","line":"}","class":"linePartCov","hits":"1","order":"1948","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:22:44", "instrumented" : 284, "covered" : 142,};
+var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:45:59", "instrumented" : 284, "covered" : 142,};
 var merged_data = [];

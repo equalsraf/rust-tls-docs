@@ -176,5 +176,5 @@ var data = {lines:[
 {"lineNum":"  175","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:22:44", "instrumented" : 66, "covered" : 60,};
+var header = { "command" : "test_mio-b9fce113d2acf305", "date" : "2016-02-17 13:45:59", "instrumented" : 66, "covered" : 60,};
 var merged_data = [];

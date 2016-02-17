@@ -625,5 +625,5 @@ var data = {lines:[
 {"lineNum":"  624","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-02-17 13:22:40", "instrumented" : 1, "covered" : 0,};
+var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-02-17 13:45:55", "instrumented" : 1, "covered" : 0,};
 var merged_data = [];
