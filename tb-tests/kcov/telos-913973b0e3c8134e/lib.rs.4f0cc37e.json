@@ -507,21 +507,21 @@ var data = {lines:[
 {"lineNum":"  506","line":"}","class":"linePartCov","hits":"1","order":"869","possible_hits":"2",},
 {"lineNum":"  507","line":""},
 {"lineNum":"  508","line":"#[test]"},
-{"lineNum":"  509","line":"fn client_ctx_defs() {","class":"lineCov","hits":"1","order":"9","possible_hits":"1",},
-{"lineNum":"  510","line":"    let c = TlsContext::new_client().unwrap();","class":"lineCov","hits":"1","order":"12","possible_hits":"1",},
+{"lineNum":"  509","line":"fn client_ctx_defs() {","class":"lineCov","hits":"1","order":"2","possible_hits":"1",},
+{"lineNum":"  510","line":"    let c = TlsContext::new_client().unwrap();","class":"lineCov","hits":"1","order":"4","possible_hits":"1",},
 {"lineNum":"  511","line":""},
 {"lineNum":"  512","line":"    // These are the defaults before the connection is set"},
 {"lineNum":"  513","line":"    assert_eq!(c.conn_version(), \"\");"},
 {"lineNum":"  514","line":"    assert_eq!(c.conn_cipher(), \"\");"},
 {"lineNum":"  515","line":"    assert!(c.peer_cert_notbefore().is_err());","class":"linePartCov","hits":"1","order":"176","possible_hits":"2",},
-{"lineNum":"  516","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"441","possible_hits":"2",},
+{"lineNum":"  516","line":"    assert!(c.peer_cert_notafter().is_err());","class":"linePartCov","hits":"1","order":"444","possible_hits":"2",},
 {"lineNum":"  517","line":"    assert_eq!(c.peer_cert_issuer(), \"\");"},
 {"lineNum":"  518","line":"    assert_eq!(c.peer_cert_subject(), \"\");"},
 {"lineNum":"  519","line":"    assert_eq!(c.peer_cert_hash(), \"\");"},
 {"lineNum":"  520","line":"    assert_eq!(c.peer_cert_contains_name(\"some.name\"), false);"},
 {"lineNum":"  521","line":"    assert_eq!(c.peer_cert_provided(), false);"},
-{"lineNum":"  522","line":"}","class":"linePartCov","hits":"1","order":"554","possible_hits":"2",},
+{"lineNum":"  522","line":"}","class":"linePartCov","hits":"1","order":"690","possible_hits":"2",},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-03-07 09:31:48", "instrumented" : 18, "covered" : 18,};
+var header = { "command" : "telos-913973b0e3c8134e", "date" : "2016-03-07 09:39:25", "instrumented" : 18, "covered" : 18,};
 var merged_data = [];

@@ -305,9 +305,9 @@ var data = {lines:[
 {"lineNum":"  304","line":"    /// assert!(secs(86399, 2_000_000_000).is_none());"},
 {"lineNum":"  305","line":"    /// ~~~~"},
 {"lineNum":"  306","line":"    #[inline]"},
-{"lineNum":"  307","line":"    pub fn from_num_seconds_from_midnight_opt(secs: u32, nano: u32) -> Option<NaiveTime> {","class":"linePartCov","hits":"2","order":"1057","possible_hits":"3",},
-{"lineNum":"  308","line":"        if secs >= 86400 || nano >= 2_000_000_000 { return None; }","class":"lineCov","hits":"1","order":"1058","possible_hits":"1",},
-{"lineNum":"  309","line":"        Some(NaiveTime { secs: secs, frac: nano })","class":"lineCov","hits":"1","order":"1059","possible_hits":"1",},
+{"lineNum":"  307","line":"    pub fn from_num_seconds_from_midnight_opt(secs: u32, nano: u32) -> Option<NaiveTime> {","class":"linePartCov","hits":"2","order":"1240","possible_hits":"3",},
+{"lineNum":"  308","line":"        if secs >= 86400 || nano >= 2_000_000_000 { return None; }","class":"lineCov","hits":"1","order":"1241","possible_hits":"1",},
+{"lineNum":"  309","line":"        Some(NaiveTime { secs: secs, frac: nano })","class":"lineCov","hits":"1","order":"1242","possible_hits":"1",},
 {"lineNum":"  310","line":"    }"},
 {"lineNum":"  311","line":""},
 {"lineNum":"  312","line":"    /// Parses a string with the specified format string and returns a new `NaiveTime`."},
@@ -828,5 +828,5 @@ var data = {lines:[
 {"lineNum":"  827","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-e477f43d15ca0050", "date" : "2016-03-07 09:31:50", "instrumented" : 6, "covered" : 3,};
+var header = { "command" : "test_client-e477f43d15ca0050", "date" : "2016-03-07 09:39:27", "instrumented" : 6, "covered" : 3,};
 var merged_data = [];

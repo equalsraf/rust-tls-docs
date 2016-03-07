@@ -437,10 +437,10 @@ var data = {lines:[
 {"lineNum":"  436","line":"    ($t:ty, $min:expr, $max:expr) => {"},
 {"lineNum":"  437","line":"        impl Bounded for $t {"},
 {"lineNum":"  438","line":"            #[inline]"},
-{"lineNum":"  439","line":"            fn min_value() -> $t { $min }","class":"lineCov","hits":"1","order":"994",},
+{"lineNum":"  439","line":"            fn min_value() -> $t { $min }","class":"lineCov","hits":"1","order":"1004",},
 {"lineNum":"  440","line":""},
 {"lineNum":"  441","line":"            #[inline]"},
-{"lineNum":"  442","line":"            fn max_value() -> $t { $max }","class":"lineCov","hits":"1","order":"991",},
+{"lineNum":"  442","line":"            fn max_value() -> $t { $max }","class":"lineCov","hits":"1","order":"1001",},
 {"lineNum":"  443","line":"        }"},
 {"lineNum":"  444","line":"    }"},
 {"lineNum":"  445","line":"}"},
@@ -1070,13 +1070,13 @@ var data = {lines:[
 {"lineNum":" 1069","line":"macro_rules! impl_to_primitive_int_to_int {"},
 {"lineNum":" 1070","line":"    ($SrcT:ty, $DstT:ty, $slf:expr) => ("},
 {"lineNum":" 1071","line":"        {"},
-{"lineNum":" 1072","line":"            if size_of::<$SrcT>() <= size_of::<$DstT>() {","class":"lineCov","hits":"1","order":"992",},
+{"lineNum":" 1072","line":"            if size_of::<$SrcT>() <= size_of::<$DstT>() {","class":"lineCov","hits":"1","order":"1002",},
 {"lineNum":" 1073","line":"                Some($slf as $DstT)"},
 {"lineNum":" 1074","line":"            } else {"},
 {"lineNum":" 1075","line":"                let n = $slf as i64;"},
-{"lineNum":" 1076","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"993",},
-{"lineNum":" 1077","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"995",},
-{"lineNum":" 1078","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"989",},
+{"lineNum":" 1076","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1003",},
+{"lineNum":" 1077","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1005",},
+{"lineNum":" 1078","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"999",},
 {"lineNum":" 1079","line":"                    Some($slf as $DstT)"},
 {"lineNum":" 1080","line":"                } else {"},
 {"lineNum":" 1081","line":"                    None"},
@@ -1110,7 +1110,7 @@ var data = {lines:[
 {"lineNum":" 1109","line":"            #[inline]"},
 {"lineNum":" 1110","line":"            fn to_i16(&self) -> Option<i16> { impl_to_primitive_int_to_int!($T, i16, *self) }"},
 {"lineNum":" 1111","line":"            #[inline]"},
-{"lineNum":" 1112","line":"            fn to_i32(&self) -> Option<i32> { impl_to_primitive_int_to_int!($T, i32, *self) }","class":"lineCov","hits":"1","order":"990",},
+{"lineNum":" 1112","line":"            fn to_i32(&self) -> Option<i32> { impl_to_primitive_int_to_int!($T, i32, *self) }","class":"lineCov","hits":"1","order":"1000",},
 {"lineNum":" 1113","line":"            #[inline]"},
 {"lineNum":" 1114","line":"            fn to_i64(&self) -> Option<i64> { impl_to_primitive_int_to_int!($T, i64, *self) }"},
 {"lineNum":" 1115","line":""},
@@ -2553,5 +2553,5 @@ var data = {lines:[
 {"lineNum":" 2552","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-03-07 09:31:56", "instrumented" : 7, "covered" : 7,};
+var header = { "command" : "test_server-9ef2987148640087", "date" : "2016-03-07 09:39:33", "instrumented" : 7, "covered" : 7,};
 var merged_data = [];
