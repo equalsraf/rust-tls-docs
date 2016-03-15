@@ -18,5 +18,5 @@ var data = {files:[
 {"link":"tls_conninfo.c.f1cb7350.html","title":"tls_conninfo.c","summary_name":"/home/travis/build/equalsraf/telos/libressl-2.3.1/tls/tls_conninfo.c","covered_class":"linePartCov","covered":"73.6","covered_lines":"95","uncovered_lines":"34","total_lines" : "129"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-43e6eae268b2f4e9", "date" : "2016-03-15 18:00:32", "instrumented" : 1437, "covered" : 845,};
+var header = { "command" : "test_client-43e6eae268b2f4e9", "date" : "2016-03-15 18:08:12", "instrumented" : 1437, "covered" : 845,};
 var merged_data = [];

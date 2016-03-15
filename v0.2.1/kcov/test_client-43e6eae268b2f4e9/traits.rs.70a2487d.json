@@ -437,10 +437,10 @@ var data = {lines:[
 {"lineNum":"  436","line":"    ($t:ty, $min:expr, $max:expr) => {"},
 {"lineNum":"  437","line":"        impl Bounded for $t {"},
 {"lineNum":"  438","line":"            #[inline]"},
-{"lineNum":"  439","line":"            fn min_value() -> $t { $min }","class":"linePartCov","hits":"2","order":"1140","possible_hits":"3",},
+{"lineNum":"  439","line":"            fn min_value() -> $t { $min }","class":"linePartCov","hits":"2","order":"1105","possible_hits":"3",},
 {"lineNum":"  440","line":""},
 {"lineNum":"  441","line":"            #[inline]"},
-{"lineNum":"  442","line":"            fn max_value() -> $t { $max }","class":"linePartCov","hits":"2","order":"1142","possible_hits":"3",},
+{"lineNum":"  442","line":"            fn max_value() -> $t { $max }","class":"linePartCov","hits":"2","order":"1110","possible_hits":"3",},
 {"lineNum":"  443","line":"        }"},
 {"lineNum":"  444","line":"    }"},
 {"lineNum":"  445","line":"}"},
@@ -1070,13 +1070,13 @@ var data = {lines:[
 {"lineNum":" 1069","line":"macro_rules! impl_to_primitive_int_to_int {"},
 {"lineNum":" 1070","line":"    ($SrcT:ty, $DstT:ty, $slf:expr) => ("},
 {"lineNum":" 1071","line":"        {"},
-{"lineNum":" 1072","line":"            if size_of::<$SrcT>() <= size_of::<$DstT>() {","class":"lineCov","hits":"1","order":"1138","possible_hits":"1",},
+{"lineNum":" 1072","line":"            if size_of::<$SrcT>() <= size_of::<$DstT>() {","class":"lineCov","hits":"1","order":"1100","possible_hits":"1",},
 {"lineNum":" 1073","line":"                Some($slf as $DstT)"},
 {"lineNum":" 1074","line":"            } else {"},
 {"lineNum":" 1075","line":"                let n = $slf as i64;"},
-{"lineNum":" 1076","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1139","possible_hits":"1",},
-{"lineNum":" 1077","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1141","possible_hits":"1",},
-{"lineNum":" 1078","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"1143","possible_hits":"1",},
+{"lineNum":" 1076","line":"                let min_value: $DstT = Bounded::min_value();","class":"lineCov","hits":"1","order":"1104","possible_hits":"1",},
+{"lineNum":" 1077","line":"                let max_value: $DstT = Bounded::max_value();","class":"lineCov","hits":"1","order":"1108","possible_hits":"1",},
+{"lineNum":" 1078","line":"                if min_value as i64 <= n && n <= max_value as i64 {","class":"lineCov","hits":"1","order":"1113","possible_hits":"1",},
 {"lineNum":" 1079","line":"                    Some($slf as $DstT)"},
 {"lineNum":" 1080","line":"                } else {"},
 {"lineNum":" 1081","line":"                    None"},
@@ -1110,7 +1110,7 @@ var data = {lines:[
 {"lineNum":" 1109","line":"            #[inline]"},
 {"lineNum":" 1110","line":"            fn to_i16(&self) -> Option<i16> { impl_to_primitive_int_to_int!($T, i16, *self) }"},
 {"lineNum":" 1111","line":"            #[inline]"},
-{"lineNum":" 1112","line":"            fn to_i32(&self) -> Option<i32> { impl_to_primitive_int_to_int!($T, i32, *self) }","class":"linePartCov","hits":"2","order":"1137","possible_hits":"3",},
+{"lineNum":" 1112","line":"            fn to_i32(&self) -> Option<i32> { impl_to_primitive_int_to_int!($T, i32, *self) }","class":"linePartCov","hits":"2","order":"1098","possible_hits":"3",},
 {"lineNum":" 1113","line":"            #[inline]"},
 {"lineNum":" 1114","line":"            fn to_i64(&self) -> Option<i64> { impl_to_primitive_int_to_int!($T, i64, *self) }"},
 {"lineNum":" 1115","line":""},
@@ -2553,5 +2553,5 @@ var data = {lines:[
 {"lineNum":" 2552","line":"}"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-43e6eae268b2f4e9", "date" : "2016-03-15 18:00:32", "instrumented" : 7, "covered" : 7,};
+var header = { "command" : "test_client-43e6eae268b2f4e9", "date" : "2016-03-15 18:08:12", "instrumented" : 7, "covered" : 7,};
 var merged_data = [];

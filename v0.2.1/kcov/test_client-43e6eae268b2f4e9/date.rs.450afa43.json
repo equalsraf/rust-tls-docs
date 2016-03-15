@@ -308,9 +308,9 @@ var data = {lines:[
 {"lineNum":"  307","line":"    /// assert_eq!(days(100000000),  None);"},
 {"lineNum":"  308","line":"    /// assert_eq!(days(-100000000), None);"},
 {"lineNum":"  309","line":"    /// ~~~~"},
-{"lineNum":"  310","line":"    pub fn from_num_days_from_ce_opt(days: i32) -> Option<NaiveDate> {","class":"lineCov","hits":"1","order":"1154","possible_hits":"1",},
-{"lineNum":"  311","line":"        let days = days + 365; // make December 31, 1 BCE equal to day 0","class":"linePartCov","hits":"1","order":"1155","possible_hits":"2",},
-{"lineNum":"  312","line":"        let (year_div_400, cycle) = div_mod_floor(days, 146097);","class":"lineCov","hits":"1","order":"1156","possible_hits":"1",},
+{"lineNum":"  310","line":"    pub fn from_num_days_from_ce_opt(days: i32) -> Option<NaiveDate> {","class":"lineCov","hits":"1","order":"1139","possible_hits":"1",},
+{"lineNum":"  311","line":"        let days = days + 365; // make December 31, 1 BCE equal to day 0","class":"linePartCov","hits":"1","order":"1141","possible_hits":"2",},
+{"lineNum":"  312","line":"        let (year_div_400, cycle) = div_mod_floor(days, 146097);","class":"lineCov","hits":"1","order":"1143","possible_hits":"1",},
 {"lineNum":"  313","line":"        let (year_mod_400, ordinal) = internals::cycle_to_yo(cycle as u32);","class":"lineCov","hits":"1","order":"1157","possible_hits":"1",},
 {"lineNum":"  314","line":"        let flags = YearFlags::from_year_mod_400(year_mod_400 as i32);","class":"lineCov","hits":"1","order":"1168","possible_hits":"1",},
 {"lineNum":"  315","line":"        NaiveDate::from_of(year_div_400 * 400 + year_mod_400 as i32,","class":"linePartCov","hits":"3","order":"1172","possible_hits":"5",},
@@ -2322,5 +2322,5 @@ var data = {lines:[
 {"lineNum":" 2321","line":""},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_client-43e6eae268b2f4e9", "date" : "2016-03-15 18:00:32", "instrumented" : 38, "covered" : 36,};
+var header = { "command" : "test_client-43e6eae268b2f4e9", "date" : "2016-03-15 18:08:12", "instrumented" : 38, "covered" : 36,};
 var merged_data = [];

@@ -11,5 +11,5 @@ var data = {files:[
 {"link":"util.rs.db821099.html","title":"util.rs","summary_name":"[...]/equalsraf/telos/telos/src/util.rs","covered_class":"lineCov","covered":"76.9","covered_lines":"10","uncovered_lines":"3","total_lines" : "13"},
 ]};
 var percent_low = 25;var percent_high = 75;
-var header = { "command" : "test_server-f6d6b2b65b381795", "date" : "2016-03-15 18:00:38", "instrumented" : 1247, "covered" : 618,};
+var header = { "command" : "test_server-f6d6b2b65b381795", "date" : "2016-03-15 18:08:19", "instrumented" : 1247, "covered" : 618,};
 var merged_data = [];
